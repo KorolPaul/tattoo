@@ -1,57 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Ticker from "../components/Ticker.astro";
-import TickerBig from "../components/TickerBig.astro";
-import EventsSlider from "~/components/EventsSlider.astro";
 import Events from "~/components/Events.astro";
-import Facts from "~/components/Facts.astro";
-import Challenges from "~/components/Challenges.astro";
-import Access from "~/components/Access.astro";
+
 ---
 
-<Layout title="YPO">
-	<Access />
+<Layout title="Timur Lysenko">
 
     <section class="section">
         <div class="section_content">
             <h1>Your Gateway to Events, Speakers, and Challenges</h1>
-            <Ticker />
-
-            <div class="stats">
-                <div class="stats_item active">
-                    <span class="stats_value">7</span>
-                    <span class="stats_label">Signature Events</span>
-                </div>
-                <div class="stats_item">
-                    <span class="stats_value">6</span>
-                    <span class="stats_label">Top-tier Speakers</span>
-                </div>
-                <div class="stats_item">
-                    <span class="stats_value">4</span>
-                    <span class="stats_label">Thrilling Challenges</span>
-                </div>
-                <div class="stats_item">
-                    <span class="stats_value">2</span>
-                    <span class="stats_label">'Impact' Initiative</span>
-                </div>
-            </div>
-            <script>
-                const statItems = document.querySelectorAll('.stats_item');
-                let index = 0;
-
-                setInterval(() => {
-                    statItems.forEach(el => el.classList.remove('active'));
-
-                    if (index <= statItems.length -2) {
-                        index++;
-                    } else {
-                        index = 0;
-                    }
-
-                    statItems[index].classList.add('active');
-                }, 2000);
-
-            </script>
 
             <div class="showcase">
                 <div class="showcase_video-wrapper">
@@ -88,56 +45,13 @@ import Access from "~/components/Access.astro";
                     <span>2024-2025</span> unfolds as a landmark year for our Event Calendar, centered around our ethos: <strong>Learn, Connect, Inspire</strong>. Engage with the <strong>People and Places of Miami</strong> as we unite a vibrant community committed to shaping the future through innovation and shared experiences.
                 </p>
 
-
-                <button class="wow-button">
-                    Click & <span class="stroke-text">WOW</span>
-                    <lottie-player  class="wow-button_success" src="/img/wow-button.json"  background="transparent"  speed="1"></lottie-player>
-
-                </button>
-                <script is:inline>
-                    document.querySelector('.wow-button').addEventListener('click', (e) => {
-                        e.preventDefault();
-                        document.querySelector('.wow-button_success').play();
-                    })
-                </script>
             </div>
         </div>
 
-        <TickerBig>
-            Icon
-            <span class="stroke-text">People</span>
-            and
-            <span class="stroke-text">Places</span>
-            of Miami
-        </TickerBig>
-
         <a name="events"></a>
-        <EventsSlider title="UPCOMING EVENTS" />
     </section>
 
-    <section class="section">
-        <div class="section_content">
-            <Events title="List EVENTS" />
-        </div>
-    </section>
 
-    <section class="section">
-        <div class="section_content">
-            <Facts title="QUICK FACTS..." />
-        </div>
-        
-    </section>
-    <TickerBig>
-        Challenge <span class="stroke-text">Everything</span> Win Everyday Challenge Everything. <span class="stroke-text">Win Everyday</span>
-    </TickerBig>
-
-    <section class="section section__purple">
-        <div class="section_content">
-
-            <a name="mission"></a>
-            <Challenges title="Challenge Showcase" />
-        </div>
-    </section>
 
     <section class="section">
         <div class="section_content">
