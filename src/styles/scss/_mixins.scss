@@ -1,0 +1,84 @@
+@mixin invisible-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin cutted-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin tablet() {
+    @media all and (min-width: 768px) { @content; }
+}
+@mixin desktop() {
+    @media all and (min-width: 1360px) { @content; }
+}
+@mixin desktop-large() {
+    @media all and (min-width: 1600px) { @content; }
+}
+@mixin big-height() {
+    @media all and (min-height: 1000px) { @content; }
+}
+@mixin media($resolution) {
+    @media all and (min-width: $resolution) { @content; }
+}
+@mixin mediaHeight($resolution) {
+    @media all and (min-height: $resolution) { @content; }
+}
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $color;
+    }
+}
+
+@mixin layout {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include desktop {
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@mixin button-reset {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    height: auto;
+    line-height: 1.2;
+    min-width: 0;
+    width: auto;
+    border-radius: 0;
+    text-transform: none;
+
+    &:hover {
+        transform: none;
+        background-color: transparent;
+    }
+
+    &:active {
+        transform: none;
+        background-color: transparent;
+    }
+
+    &::before {
+        content: none;
+    }
+}
+
+@function vw($px) {
+    @return $px * 0.068vw
+}
+
+
+

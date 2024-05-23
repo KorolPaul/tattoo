@@ -1,0 +1,58 @@
+.preloader {
+    display: none !important;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background-color: $cLight;
+    transition: .5s $easing opacity;
+    
+    .loaded & {
+        animation: autohide 7.25s linear forwards;
+        @include tablet {
+            animation-duration: 7.25s;
+        }
+    }
+
+    &_image {
+        width: 100%;
+        @include tablet {
+            max-width: 90%;
+            width: 1000px;
+        }
+
+        &__mobile {
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &__desktop {
+            display: none;
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes autohide {
+    0% {
+        opacity: 1;
+    }
+
+    86% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,38 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+    @include placeholder-color(#919191);
+    color: $color;
+    background: $cLight;
+    border: 1px solid $color;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    height: 68px;
+    line-height: 68px;
+    padding: 0 16px;
+    width: 100%;
+    transition: .2s $easingSmooth border-color,
+                .2s $easingSmooth color,
+                .2s $easingSmooth box-shadow;
+    text-align: center;
+    @include tablet {
+        font-size: 24px;
+    }
+
+    &:focus {
+        color: $color;
+        box-shadow: 0 0 1px 0 $color;
+    }
+
+    .error & {
+        border-color: #F00;
+        color: #F00;
+    }
+}

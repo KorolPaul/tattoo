@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import "const";
+@import "mixins";
+@import "placeholders";
+
+/* basic */
+@import "basic/normalize";
+@import "basic/fonts";
+@import "basic/default";
+
+/*Form elements*/
+@import "form-elements/button";
+@import "form-elements/input-text";
+@import "form-elements/textarea";
+@import "form-elements/checkbox";
+@import "form-elements/label";
+@import "form-elements/form";
+@import "form-elements/submit";
+
+/*layout*/
+@import "layout/headings";
+@import "layout/header";
+@import "layout/logo";
+@import "layout/footer";
+@import "layout/menu";
+@import "layout/menu-toggle";
+@import "layout/tabs";
+@import "layout/copyright";
+@import "layout/tags";
+@import "layout/preloader";
+@import "layout/section";
+@import "layout/stroke-text";
+@import "layout/label";
+@import "layout/button-link";
+@import "layout/access";
+
+/* other */
+@import "other/ticker";
+@import "other/ticker-big";
+@import "other/stats";
+@import "other/showcase";
+@import "other/events-slider";
+@import "other/event-slide";
+@import "other/events";
+@import "other/stories";
+@import "other/cards";
+@import "other/facts";
+@import "other/challenges";
+@import "other/event-page";
+@import "other/program";
+@import "other/schedule";
+@import "other/mission";
+@import "other/video-card";
+@import "other/kpis";
+@import "other/about";
+@import "other/wow-button";
+
+/* plugins */
+@import "plugins/swiper";

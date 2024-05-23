@@ -1,0 +1,85 @@
+.menu-toggle {
+    @include button-reset;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 52px;
+    height: 40px;
+    font-weight: 500;
+    padding: 7px 7px 7px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    border-radius: 6px;
+    z-index: 10;
+    transition: .2s $easingSmooth opacity,
+                .2s $easingSmooth color,
+                .2s $easingSmooth background-color,
+                .2s $easingSmooth transform;
+    @include desktop {
+        display: none;
+    }
+
+    .menu-opened & {
+        background-color: transparent !important;
+    }
+
+    &:hover {
+        background-color: $color;
+    }
+
+    &_title {
+        line-height: 1;
+        display: block;
+        height: 10px;
+        transition: .2s $easingSmooth opacity;
+
+        .menu-opened & {
+            opacity: 0;
+        }
+    }
+    
+    &_lines {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 30px;
+        position: relative;
+    }
+
+    &_line,
+    &_dioganal-line {
+        height: 2px;
+        transform-origin: center;
+        transition: .2s $easingSmooth scale;
+        scale: (1, 1);
+    }
+
+    &_dioganal-line {
+        background-color: $color;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 6px;
+        rotate: -45deg;
+
+        &:last-child {
+            rotate: 45deg;
+        }
+    }
+
+    &_line {
+        background-color: $cLight;
+        .menu-opened & {
+            scale: 0 1;
+        }
+    }
+
+    &_dioganal-line {
+        scale: 0 1;
+
+        .menu-opened & {
+            scale: 1 1;
+        }
+    }
+}
