@@ -1,19 +1,44 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Events from "~/components/Events.astro";
+import TatoosSlider from "~components/TatoosSlider.astro";
 
 ---
 
 <Layout title="Timur Lysenko">
 
+    <section class="section" style="background-image: url(img/backgrounds/1.png);">
+        <div class="section_content">
+
+            <div class="intro">
+                <h1 class="intro_title title">
+                    <div>
+                        luk
+                    </div> 
+                    <div>
+                        et
+                    </div> 
+                    <div>
+                        mi bich!
+                    </div> 
+                </h1>
+                <img src="/img/intro-image.png" alt="" class="intro_image">
+            </div>
+
+        </div>
+
+    </section>
+
     <section class="section">
         <div class="section_content">
-            <h1>Your Gateway to Events, Speakers, and Challenges</h1>
-
-            <div class="showcase">
+             <div class="showcase">
                 <div class="showcase_video-wrapper">
                     <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop autoplay muted playsinline></video>
-
+                    <div class="showcase_button">
+                        <button class="button button__green">
+                            Peek Into My World
+                            <img src="/img/play.svg" alt="">
+                        </button>
+                    </div>
                     <script>
                         const videoWrapper = document.querySelector('.showcase_video-wrapper');
 
@@ -40,25 +65,41 @@ import Events from "~/components/Events.astro";
                             }
                         });
                     </script>
+
                 </div>
-                <p class="showcase_text">
-                    <span>2024-2025</span> unfolds as a landmark year for our Event Calendar, centered around our ethos: <strong>Learn, Connect, Inspire</strong>. Engage with the <strong>People and Places of Miami</strong> as we unite a vibrant community committed to shaping the future through innovation and shared experiences.
-                </p>
 
             </div>
         </div>
 
-        <a name="events"></a>
     </section>
-
-
 
     <section class="section">
         <div class="section_content">
             <div class="about">
-                <h2>For more about us and our Leadership, visit our Mission page to dive deeper into our vision</h2>
-                <a href="#" class="about_link button-link button-link__dark">Explore Our Mission & Leadership</a>
+                <img src="/img/head.png" alt="" class="about_image">
+
+                <h2 class="title">
+                    I sho?
+                </h2>
+                <h3 class="title">
+                    WHAT'S UP?
+                </h3>
+                
+                <div class="about_text">
+                    <p>
+                        I'm Timur, the soul behind the needle, living and breathing tattoos. 
+                        My art lives in the spaces between realism, surrealism, trash-polka, and blackwork. Tattooing for me is not just work; it's a piece of my essence etched forever. Operating out of Katowice and Wroclaw, Redberry Tattoo Studio is where my unique style comes to life. 
+                    </p>
+
+                    <p>'I sho? Look at me, bitch!'—this is where art meets skin.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section_content">
+            <TatoosSlider />
         </div>
     </section>
 </Layout>

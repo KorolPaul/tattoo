@@ -1,6 +1,18 @@
 .logo {
-    width: 200px;
+    width: 166px;
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    margin-left: -83px;
     @include desktop {
-        width: 318px;
+        width: 208px;
+        margin-left: -83px;
+        top: 65px;
+        margin-left: -104px;
+    }
+
+    &_image {
+        display: block;
+        width: 100%;
     }
 }

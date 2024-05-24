@@ -1,29 +1,21 @@
 <header class="header">
-    <div class="header_holder">
-        <a href="/" class="logo">
-            Timur
-            Lysenko
-        </a>
-        <div class="menu">
-            <a href="/" class="menu_logo">
-                <lottie-player class="menu_logo-image" src="/img/menu-logo.json" background="transparent" speed="1" loop autoplay></lottie-player>
-            </a>
-            <nav class="menu_links">
-                <a href="/#tatoo" class="menu_link">Tattoo</a>
-                <a href="/#artwork" class="menu_link">ARTWORK</a>
-                <a href="/#biography" class="menu_link">Biography</a>
-                <a href="/#store" class="menu_link">STore
-                </a>
-
-            </nav>
-            <script>
-                document.querySelectorAll('.menu_link').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('menu-opened')))
-            </script>
-        </div>
-        <button class="menu-toggle">
-            MENU
-        </button>
+    <a href="/" class="logo">
+        <img class="logo_image" src="/img/logo.svg" alt="">
+    </a>
+    <div class="menu">
+        <nav class="menu_links">
+            <a href="/#tatoo" class="menu_link" style="color: #FF008C">Tattoo</a>
+            <a href="/#artwork" class="menu_link" style="color: #618201">ARTWORK</a>
+            <a href="/#biography" class="menu_link" style="color: #001BAC">Biography</a>
+            <a href="/#store" class="menu_link" style="color: #FBAB07">STore</a>
+        </nav>
+        <script>
+            document.querySelectorAll('.menu_link').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('menu-opened')))
+        </script>
     </div>
+    <button class="menu-toggle">
+        MENU
+    </button>
 </header>
 
 <script>

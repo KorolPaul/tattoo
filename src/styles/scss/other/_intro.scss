@@ -1,0 +1,17 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &_title {
+        position: absolute;
+        right: 0;
+        bottom: 22px;
+        @include desktop {
+            bottom: 74px;
+            right: auto;
+            left: 65%;
+            transform: translateX(-50%);
+        }
+    }
+}

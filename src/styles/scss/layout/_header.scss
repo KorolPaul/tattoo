@@ -1,9 +1,4 @@
 .header {
-    position: fixed;
-    top: 52px;
-    left: 20px;
-    right: 20px;
-    z-index: 10;
 
     &_holder {
         @include layout;

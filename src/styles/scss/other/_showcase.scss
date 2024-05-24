@@ -1,0 +1,23 @@
+.showcase {
+    &_video-wrapper {
+        position: relative;
+    }
+
+    &_video {
+        max-width: 100%;
+    }
+
+    &_button {
+        position: absolute;
+        bottom: 88px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        @include desktop {
+            left: auto;
+            transform: none;
+            right: 58px;
+            bottom: 64px;
+        }
+    }
+}

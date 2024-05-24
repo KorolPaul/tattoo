@@ -3,21 +3,21 @@
     z-index: 9;
     opacity: 0;
     pointer-events: none;
-    position: fixed;
+    display: flex;
     flex-direction: column;
-    gap: 13px;
+    align-items: center;
+    position: fixed;
     opacity: 0;
     pointer-events: none;
-    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    padding: 136px 40px 32px;
+    padding: $indent;
     box-sizing: border-box;
     overflow: auto;
     z-index: 10;
-    background-color: $cLight;
+    background-color: $color;
     transition: .2s $easingSmooth opacity,
                 .2s $easingSmooth transform;
     @include desktop {
@@ -27,9 +27,9 @@
         opacity: 1;
         pointer-events: all;
         position: absolute;
-        top: 50%;
+        top: 105px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         padding: 0;
         gap: 0;
         height: auto;
@@ -46,78 +46,43 @@
     &_links {
         display: flex;
         flex-direction: column;
+        gap: 28px;
         @include desktop {
             flex-direction: row;
+            gap: 84px;
         }
     }
 
     &_link {
-        font-size: 20px;
-        font-weight: 900;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 64px;
+        font-style: normal;
+        line-height: .94;
+        color: $cLight;
         text-transform: uppercase;
-        height: 64px;
-        line-height: 64px;
-        padding: 0 4px;
         text-align: center;
         text-decoration: none;
         white-space: nowrap;
-        border-top: 1px solid currentColor;
+        filter: brightness(10);
+        transition: .2s $easing filter;
         @include desktop {
-            position: relative;
-            display: block;
-            color: $cLight;
-            background-color: $color;
-            font-size: 14px;
-            font-weight: 700;
-            border: none;
-            padding: 0 18px;
+            color: $color;
+            font-size: 30px;
+            filter: brightness(0);
         }
 
         &:hover {
+            filter: brightness(1);
+        }
+
+        &:nth-child(2) {
             @include desktop {
-                background: linear-gradient(79deg, #1B1B1B 3.31%, #FF5208 71.93%, #FF5208 91.85%);;
+                margin-right: 222px;
             }
         }
-
-        &:first-child {
-            border-radius: 8px 0 0 8px;
-            border: none;
-        }
-        &:last-child {
-            border-radius: 0 8px 8px 0;
-        }
-    }
-
-    &_link-icon {
-        vertical-align: baseline;
-        margin: 0 0 -3px 5px;
-        width: 20px;
-        @include desktop {
-            display: none;
-        }
-    }
-
-    &_link-soon {
-        width: 66px;
-        margin: 0 3px 0 8px;
-        @include desktop {
-            position: absolute;
-            top: -24px;
-            left: 90px;
-        }
-    }
-
-    &_logo {
-        position: absolute;
-        top: 22px;
-        margin-left: -101px;
-        left: 50%;
-        width: 203px;
-        @include desktop {
-            display: none; 
+        &:nth-child(3) {
+            @include desktop {
+                margin-left: 222px;
+            }
         }
     }
 }
