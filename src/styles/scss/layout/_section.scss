@@ -1,6 +1,7 @@
 .section {
     overflow: hidden;
     padding-bottom: 120px;
+    background: fixed no-repeat center / cover;
     @include desktop {
         padding-bottom: 220px;
     }

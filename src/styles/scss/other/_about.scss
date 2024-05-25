@@ -1,0 +1,6 @@
+.about {
+    @include desktop {
+        display: flex;
+        gap: 60px;
+    }
+}

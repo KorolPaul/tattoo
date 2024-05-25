@@ -1,10 +1,26 @@
 .showcase {
     &_video-wrapper {
         position: relative;
+        
+        &::before {
+            content: '';
+            width: 1652px;
+            height: 980px;
+            border-radius: 1652px;
+            background: rgba(251, 171, 7, 0.69);
+            filter: blur(110px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
     }
 
     &_video {
         max-width: 100%;
+        position: relative;
+        z-index: 2;
     }
 
     &_button {
