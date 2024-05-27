@@ -1,0 +1,17 @@
+.contacts {
+    &_text {
+        p {
+            margin: 0;
+        }
+    }
+
+    &_links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include desktop {
+            flex-direction: row;
+            gap: 110px;
+        }
+    }
+}

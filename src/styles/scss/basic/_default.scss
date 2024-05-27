@@ -4,13 +4,12 @@ html {
 
 body {
     color: $color;
-    font: #{$font-size__small}/#{1.2} $font-family;
+    font: #{$font-size__small}/#{1.45} $font-family;
     padding: 0;
-    letter-spacing: -1px;
     scroll-behavior: smooth;
     padding: 162px 0 0;
-    @include tablet {
-        padding-top: 190px;
+    @include desktop {
+        font-size: $font-size;
     }
 }
 

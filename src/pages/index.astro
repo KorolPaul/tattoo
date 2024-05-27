@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TatoosSlider from "~components/TatoosSlider.astro";
+import TabsSlider from "~components/TabsSlider.astro";
 
 ---
 
@@ -76,7 +77,7 @@ import TatoosSlider from "~components/TatoosSlider.astro";
     <section class="section" style="background-image: url(img/backgrounds/3.png);">
         <div class="section_content">
             <div class="about">
-                <img src="/img/head-bright.png" alt="" class="about_image">
+                <lottie-player class="about_image" src="/img/json/face-pink/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
 
                 <div class="about_content">
                     <h2 class="title">
@@ -102,13 +103,52 @@ import TatoosSlider from "~components/TatoosSlider.astro";
             <div class="book">
                 <button class="button">Book Your Ink Session</button>
             </div>
+
+            <TabsSlider
+                title="Sketches"
+                tabsLabel="Series",
+                tabs={
+                    [
+                        {
+                            name: 'Okay,fuckyou',
+                            slides: [
+                                {src: '/img/sketches/okay-1.jpg', title: '“Silesians” 2024'},
+                                {src: '/img/sketches/okay-2.jpg', title: '“Silesians” 2024'},
+                                {src: '/img/sketches/okay-3.jpg', title: '“Silesians” 2024'},
+                                {src: '/img/sketches/okay-4.jpg', title: '“Silesians” 2024'},
+                                {src: '/img/sketches/okay-5.jpg', title: '“Silesians” 2024'},
+                                {src: '/img/sketches/okay-6.jpg', title: '“Silesians” 2024'},
+                            ]
+                        },
+                        {
+                            name: 'Nahujnada',
+                            slides: [
+                                {src: '/img/sketches/nahujnada-1.jpg'},
+                                {src: '/img/sketches/nahujnada-2.jpg'},
+                                {src: '/img/sketches/nahujnada-3.jpg'},
+                                {src: '/img/sketches/nahujnada-4.jpg'},
+                                {src: '/img/sketches/nahujnada-5.jpg'},
+                                {src: '/img/sketches/nahujnada-6.jpg'},
+                            ]
+                        },
+                        {
+                            name: 'yeah,boy!',
+                            slides: [
+                                {src: '/img/sketches/yeah-1.jpg'},
+                                {src: '/img/sketches/yeah-2.jpg'},
+                                {src: '/img/sketches/yeah-3.jpg'},
+                            ]
+                        }
+                    ]
+                },
+            />
         </div>
     </section>
 
-    <section class="section" class="section" style="background-image: url(img/backgrounds/4.jpg);">
+    <section class="section section__blue" style="background-image: url(img/backgrounds/4.jpg);">
         <div class="section_content">
             <div class="about">
-                <img src="/img/head.png" alt="" class="about_image">
+                <lottie-player class="about_image" src="/img/json/face/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
 
                 <div class="about_content">
                     <h2 class="title">
@@ -123,6 +163,107 @@ import TatoosSlider from "~components/TatoosSlider.astro";
                             This series, which you can feast your eyes on at the convention, is a testament to my journey, my questions, and my declarations in the world of art. 'I sho?' - I constantly ask myself, pushing the boundaries of my creativity. Each painting is a chapter of my soul, a 'look at me, bitch!' moment where I dare the world to see through my eyes. The strokes, colors, and themes, they all scream 'eto maya galereya!', proudly showcasing the essence of who I am and what I stand for. So, dive in, explore, and let's have a 'look at me, bitch!' journey together through my gallery. 
                         </p>
                     </div>
+                </div>
+            </div>
+
+            <TabsSlider
+                title="Oil Whispers"
+                subtitle="This series, which you can feast your eyes on at the convention, is a collection of my latest oil paintings. "
+                tabsLabel="Series",
+                tabs={
+                    [
+                        {
+                            name: 'DRESOLOGIA',
+                            slides: [
+                                {src: '/img/paintings/dresologia-1.jpg'},
+                                {src: '/img/paintings/dresologia-2.jpg'},
+                                {src: '/img/paintings/dresologia-3.jpg'},
+                                {src: '/img/paintings/dresologia-4.jpg'},
+                                {src: '/img/paintings/dresologia-5.jpg'},
+                                {src: '/img/paintings/dresologia-6.jpg'},
+                                {src: '/img/paintings/dresologia-7.jpg'},
+                            ]
+                        },
+                        {
+                            name: 'Holy Adidas',
+                            slides: [
+                                {src: '/img/paintings/adidas-1.jpg'},
+                                {src: '/img/paintings/adidas-2.jpg'},
+                                {src: '/img/paintings/adidas-3.jpg'},
+                                {src: '/img/paintings/adidas-4.jpg'},
+                                {src: '/img/paintings/adidas-5.jpg'},
+                            ]
+                        },
+                    ]
+                },
+            />
+        </div>
+    </section>
+
+    <section class="section section__white" style="background-image: url(img/backgrounds/5.jpg);">
+        <div class="section_content">
+            <div class="about">
+                <lottie-player class="about_image" src="/img/json/face-white/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
+
+                <div class="about_content">
+                    <h2 class="title">
+                        Kto ya?
+                    </h2>
+                    <h3 class="title">
+                        WHO AM I?
+                    </h3>
+                    
+                    <div class="about_text">
+                        <p>
+                            Timur Lysenko, born in 1988, am not just a tattoo artist, graphic designer, craftsman, and painter; I am a creator at heart. Having hailed from Ukraine, I've made Poland my home for the past 13 years. "I sho?" I often find myself asking, as I dive deep into the realms of creating something new, merging various forms of art with a playful rebellion. My inspiration? It's drawn from within, my own subconscious, and the rich tapestry of my surroundings and nature.
+                        </p>
+                        <p>
+                            Back in the day, I dabbled in making collages with plants and crafted graphics that spoke volumes. But let me tell you, "luk et mi bich!", painting has become the cornerstone of my artistic endeavors. It's not just a branch of my activities; it's the root, the soul.
+                        </p>
+                        <p>
+                            Among the narratives I've spun into color and form, Dresology stands out – it's the first of several series of paintings I've birthed. ions, and my declarations in the world of art. 'I sho?' - I constantly ask myself, pushing the boundaries of my creativity. Each painting is a chapter of my soul, a 'look at me, bitch!' moment where I dare the world to see through my eyes. The strokes, colors, and themes, they all scream 'eto maya galereya!', proudly showcasing the essence of who I am and what I stand for. So, dive in, explore, and let's have a 'look at me, bitch!' journey together through my gallery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="poster">
+                <div class="poster_content">
+                    <span class="poster_suibtitle">
+                        Look at me,bitch! 
+                    </span>
+                    <h3 class="poster_title">
+                        Grab exclusive gear from my store. Get your rebel on!
+                    </h3>
+                    <button class="button button__yellow">Storm the STORE</button>
+                </div>
+                <div class="poster_image-wrapper">
+                    <img src="/img/poster.png" alt="" class="poster_image">
+                    <video class="poster_video" src="/img/poster.mp4" autoplay muted playsinline />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section__blue" style="background-image: url(img/backgrounds/footer.jpg);">
+        <div class="section_content">
+            <div class="contacts">
+                <h2 class="contacts_title">Contact</h2>
+                <div class="contacts_text">
+                    <p>I sho, wanna chat? </p>
+                    <p>Hit me up!’ – Slide into my socials.</p>
+                </div>
+                <div class="contacts_links">
+                    <a href="mailto:timurlysenkotattoo@gmail.com" class="contacts_link" target="_blank">BOOKING tattoo</a>
+                    <a href="https://www.instagram.com/timur_lysenko/" class="contacts_link" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/tattoo.timurlysenko/" class="contacts_link" target="_blank">Facebook</a>
+                </div>
+                <div class="contacts_text">
+                    <p>Hit me up on email! Might take an age, but I'll get back to ya... eventually. No rush, right?</p>
+                </div>
+                <div class="contacts_links">
+                    <a href="mailto:timurlysenko@gmail.com" class="contacts_link" target="_blank">timurlysenko@gmail.com</a>
                 </div>
             </div>
         </div>

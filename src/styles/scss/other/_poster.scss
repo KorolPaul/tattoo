@@ -1,0 +1,26 @@
+.poster {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 86px;
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &_image-wrapper {
+        position: relative;
+        max-width: 1000px;
+    }
+
+    &_image {
+        display: block;
+    }
+
+    &_video {
+        position: absolute;
+        width: 52%;
+        bottom: 15%;
+        left: 47%;
+        transform: translateX(-50%) rotate(-1deg);
+    }
+}

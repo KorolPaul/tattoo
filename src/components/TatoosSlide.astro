@@ -1,14 +1,16 @@
 ---
 export interface Props {
-    color: string;
+    color?: string;
     src: string;
+    title?: string;
 }
 
-const { src, color } = Astro.props;
+const { src, color, title } = Astro.props;
 ---
 
 <a class="tatoo" href="/events/event" style={`background-color: ${color}`}>
     <div class="tatoo_arrow" style={`background-color: ${color}`} />
     <img class="tatoo_image" src={src} alt="" />
+    {title && <span class="tatoo_title">{title}</span>}
 </a>
 
