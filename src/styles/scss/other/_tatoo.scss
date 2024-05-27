@@ -1,0 +1,31 @@
+.tatoo {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    padding: 20px 6px;
+    border: 1px solid currentColor;
+    @include desktop {
+        padding: 26px 8px;
+    }
+
+    &_image {
+        display: block;
+        max-width: 482px;
+        border: 1px solid currentColor;
+    }
+
+    &_arrow {
+        position: absolute;
+        right: 7px;
+        bottom: 21px;
+        width: 42px;
+        height: 42px;  
+        background: url(#{$img}/loop.svg) no-repeat center;
+        @include desktop {
+            width: 54px;
+            height: 54px;
+            right: 9px;
+            bottom: 27px;
+        }
+    }
+}
