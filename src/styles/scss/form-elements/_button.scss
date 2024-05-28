@@ -1,59 +1,40 @@
 @mixin button {
     display: inline-block;
-    background: $color;
+    background: transparent url(#{$img}/button.png) no-repeat center / 100% 100%;
     box-sizing: border-box;
     cursor: pointer;
-    color: $cLight;
+    color: $color;
     border: none;
-    border-radius: 16px;
+    border-radius: 0;
     white-space: nowrap;
     text-align: center;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 900;
-    height: 85px;
-    line-height: 95px;
-    letter-spacing: -0.68px;
-    text-transform: uppercase;
-    padding: 0 20px;
+    width: 324px;
+    height: 93px;
     font-family: $font-family;
-    min-width: 250px;
-    width: 100%;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 93px;
+    padding: 0 20px;
     position: relative;
-    transition: .3s $easing background,
-                .2s $easing color,
-                .2s $easing border-color;
-    @include tablet {
-        width: auto;
-        height: 117px;
-        line-height: 127px;
+    @include desktop {
+        width: 605px;
+        height: 141px;
+        font-size: 44px;
+        line-height: 141px;
     }
 
     &:hover {
-        // background: linear-gradient(45deg, #141418 13.06%, #787891 99.63%);
-        color: $cLight;
+        animation: button-rotate .5s steps(2, start)  forwards;
     }
 
     &:active {
-        // background: $color;
-        color: $cLight;
+        animation: button-scale .5s steps(1, start)  forwards;
     }
 
     &:disabled {
         pointer-events: none;
         opacity: .6;
-    }
-
-    &::before {
-        content: '';
-        border-radius: 16px;
-        background: linear-gradient(180deg, #A4F9C1 0%, #B087CF 43.5%, #FFC7E9 76.5%, #B9AFF5 100%);
-        position: absolute;
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-        z-index: -1;
     }
 }
 
@@ -63,3 +44,44 @@ input[type="button"] {
     @include button;
 }
 
+.button {
+    &__orange {
+        background-image: url(#{$img}/button-orange.png);
+    }
+}
+
+@keyframes button-rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    33% {
+        rotate: -3deg;
+    }
+
+    66% {
+        rotate: 2deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes button-scale {
+    0% {
+        scale: 1;
+    }
+
+    33% {
+        scale: 0.97;
+    }
+
+    66% {
+        scale: 0.93;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
