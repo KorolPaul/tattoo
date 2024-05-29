@@ -4,6 +4,7 @@ html {
 
 body {
     color: $color;
+    background: url(#{$img}/noise.png) repeat;
     font: #{$font-size__small}/#{1.45} $font-family;
     padding: 0;
     scroll-behavior: smooth;
