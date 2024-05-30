@@ -9,7 +9,12 @@ import TabsSlider from "~components/TabsSlider.astro";
     
     <section class="section section__no-indent section__no-bottom-indent" style="background-image: url(img/backgrounds/1.png);">
         <div class="section_content">
+            
             <div class="intro">
+                <div class="glitch">
+                    <lottie-player class="glitch_image" src="/img/json/glitches/intro.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+                </div>
+
                 <lottie-player class="intro_image" src="/img/json/timur/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
             </div>
 
@@ -67,6 +72,10 @@ import TabsSlider from "~components/TabsSlider.astro";
             <span class="section_label">Artwork</span>
 
             <div class="about">
+                <div class="glitch">
+                    <lottie-player class="glitch_image" src="/img/json/glitches/tatoo.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+                </div>
+
                 <lottie-player class="about_image" src="/img/json/face-pink/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
                 <div class="about_content">
@@ -136,7 +145,7 @@ import TabsSlider from "~components/TabsSlider.astro";
         </div>
     </section>
 
-    <section class="section section__blue" style="background-image: url(img/backgrounds/4.jpg);">
+    <section class="section section__blu section__no-bottom-indent" style="background-image: url(img/backgrounds/4.jpg);">
         <div class="section_content">
             <span class="section_label">Artwork</span>
 
@@ -190,13 +199,22 @@ import TabsSlider from "~components/TabsSlider.astro";
                     ]
                 },
             />
+
+            <div class="artwork">
+                <lottie-player class="artwork_image" src="/img/json/artwork/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+            </div>
         </div>
+
     </section>
 
     <section class="section section__white section__no-bottom-indent" style="background-image: url(img/backgrounds/5.jpg);">
         <div class="section_content">
             <span class="section_label">Biography</span>
             <div class="about">
+                <div class="glitch">
+                    <lottie-player class="glitch_image" src="/img/json/glitches/biography.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+                </div>
+
                 <lottie-player class="about_image" src="/img/json/face-white/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
                 <div class="about_content">
@@ -234,7 +252,7 @@ import TabsSlider from "~components/TabsSlider.astro";
                 </div>
                 <div class="poster_image-wrapper">
                     <img src="/img/poster.png" alt="" class="poster_image">
-                    <video class="poster_video" src="/img/poster.mp4" autoplay muted playsinline />
+                    <video class="poster_video" src="/img/poster.mp4" autoplay muted playsinline loop />
                     <div class="poster_labels">
                         <img src="/img/poster-label-1.svg" alt="" class="poster_label">
                         <img src="/img/poster-label-2.svg" alt="" class="poster_label">
@@ -249,6 +267,11 @@ import TabsSlider from "~components/TabsSlider.astro";
         <button class="section_top-button" onclick="window.scrollTo(0, 0)">Go back to top</button>
         <div class="section_content">
             <div class="contacts">
+                <div class="glitch">
+                    <lottie-player class="glitch_image" src="/img/json/glitches/footer.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+                </div>
+
+
                 <h2 class="contacts_title">Contact</h2>
                 <div class="contacts_text">
                     <p>I sho, wanna chat? </p>

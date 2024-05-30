@@ -1,0 +1,12 @@
+.artwork {
+    display: flex;
+    justify-content: center;
+
+    &_image {
+        max-width: 100%;
+        @include tablet {
+            width: 830px;
+            margin-left: 15%;
+        }
+    }
+}
