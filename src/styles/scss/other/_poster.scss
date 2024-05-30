@@ -14,6 +14,8 @@
 
     &_image {
         display: block;
+        position: relative;
+        z-index: 2;
     }
 
     &_video {
@@ -21,6 +23,54 @@
         width: 52%;
         bottom: 15%;
         left: 47%;
+        z-index: 3;
         transform: translateX(-50%) rotate(-1deg);
+    }
+
+    &_subtitle {
+        font-size: 64px;
+        line-height: 1.05;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        display: block;
+        @include desktop {
+            font-size: 54px;
+            margin-bottom: 52px;
+        }
+    }
+
+    &_title[class] {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+        color: $cYellow;
+        @include desktop {
+            font-size: 84px;
+        }
+    }
+
+    &_content {
+        @include desktop {
+            padding-top: 150px;
+        }
+    }
+
+    &_labels {
+        display: none;
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-end;
+            position: absolute;
+            right: 78%;
+            bottom: 113px;
+            z-index: 1;
+        }
+    }
+
+    &_label {
+        max-width: none;
     }
 }

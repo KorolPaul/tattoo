@@ -1,0 +1,22 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    @include desktop {
+        flex-direction: row;
+        padding-bottom: 410px;
+        justify-content: center;
+    }
+
+    &_animation {
+        max-width: 100%;
+        @include desktop {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: auto;
+        }
+    }
+}

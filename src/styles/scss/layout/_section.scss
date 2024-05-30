@@ -1,22 +1,46 @@
 .section {
     overflow: hidden;
-    padding-bottom: 120px;
-    background: fixed no-repeat center / cover;
+    padding: 136px 0 170px;
+    background:  no-repeat center / cover;
     position: relative;
     @include desktop {
-        padding-bottom: 220px;
+        padding-top: 275px;
+        padding-bottom: 205px;
     }
 
     &__blue {
         color: $cBlue;
+
+        h2,
+        h3 {
+            color: $cBlue;
+        }
     }
 
     &__white {
         color: $cLight;
+
+        h2 {
+            color: $cGreen;
+        }
+
+        h3 {
+            color: $cLight;
+        }
+    }
+
+    &__no-indent {
+        padding: 0;
+    }
+
+    &__no-bottom-indent {
+        padding-bottom: 0;
     }
 
     &_content {
         @include layout;
+        position: relative;
+        z-index: 2;
     }
 
     &_noise {
@@ -25,5 +49,43 @@
         top: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &_top-button {
+        @include button-reset;
+        position: absolute;
+        right: 6px;
+        top: 60px;
+        font-size: 34px;
+        padding: 0 100px 0 0;
+        color: $cBlue;
+        background: url(#{$img}/top-arrow.svg) no-repeat right center / 70px auto;
+        @include desktop {
+            font-size: 44px;
+            background-size: 82px auto;
+            right: 140px;
+            top: 100px;
+        }
+    }
+
+    &_label {
+        display: block;
+        margin: 0 0 44px;
+        font-size: 54px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        @include desktop {
+            margin-bottom: 112px;
+        }
+
+        .section__blue & {
+            color: $cBlue;
+        }
+    
+        .section__white & {
+            color: $cLight;
+        }
     }
 }

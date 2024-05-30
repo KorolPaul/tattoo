@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    pointer-events: none;
 
     &_title {
         position: absolute;

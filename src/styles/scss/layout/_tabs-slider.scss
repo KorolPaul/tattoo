@@ -1,0 +1,65 @@
+.tabs-slider {
+    &_label {
+        font-size: 34px;
+        line-height: 1.47;
+        display: block;
+        color: $cBlue;
+        margin: 0 0 10px;
+        @include desktop {
+            display: inline-block;
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+        margin: 0 0 26px;
+        @include desktop {
+            display: inline-flex;
+            gap: 26px;
+            margin-bottom: 140px;
+        }
+    }
+
+    &_button {
+        background: transparent;
+        width: 172px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 20px;
+        color: $cLight;
+        position: relative;
+        isolation: isolate;
+        text-transform: uppercase;
+        padding: 0 3px;
+        @include desktop {
+            font-size: 34px;
+            width: 291px;
+            height: 61px;
+            line-height: 61px;
+        }
+
+
+        &.active {
+            color: $color;
+        }
+    }
+
+    &_button-bg {
+        background: url(#{$img}/button-pink.png) no-repeat center / 100% 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        filter: brightness(0);
+        pointer-events: none;
+        z-index: -1;
+        transition: .2s $easingSmooth filter;
+
+        .active & {
+            filter: brightness(1);
+        }
+    }
+}

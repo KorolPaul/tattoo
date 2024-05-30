@@ -6,11 +6,9 @@ import TabsSlider from "~components/TabsSlider.astro";
 ---
 
 <Layout title="Timur Lysenko">
-
-    <section class="section" style="background-image: url(img/backgrounds/1.png);">
+    
+    <section class="section section__no-indent section__no-bottom-indent" style="background-image: url(img/backgrounds/1.png);">
         <div class="section_content">
-            <lottie-player class="section_noise" src="/img/json/noise/black.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-
             <div class="intro">
                 <lottie-player class="intro_image" src="/img/json/timur/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
             </div>
@@ -65,11 +63,11 @@ import TabsSlider from "~components/TabsSlider.astro";
     </section>
 
     <section class="section" style="background-image: url(img/backgrounds/3.png);">
-        <lottie-player class="section_noise" src="/img/json/noise/black.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-
         <div class="section_content">
+            <span class="section_label">Artwork</span>
+
             <div class="about">
-                <lottie-player class="about_image" src="/img/json/face-pink/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
+                <lottie-player class="about_image" src="/img/json/face-pink/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
                 <div class="about_content">
                     <h2 class="title">
@@ -94,6 +92,7 @@ import TabsSlider from "~components/TabsSlider.astro";
 
             <div class="book">
                 <button class="button">Book Your Ink Session</button>
+                <lottie-player class="book_animation" src="/img/json/booking/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
             </div>
 
             <TabsSlider
@@ -138,11 +137,11 @@ import TabsSlider from "~components/TabsSlider.astro";
     </section>
 
     <section class="section section__blue" style="background-image: url(img/backgrounds/4.jpg);">
-        <lottie-player class="section_noise" src="/img/json/noise/pink.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-
         <div class="section_content">
+            <span class="section_label">Artwork</span>
+
             <div class="about">
-                <lottie-player class="about_image" src="/img/json/face/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
+                <lottie-player class="about_image" src="/img/json/face/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
                 <div class="about_content">
                     <h2 class="title">
@@ -194,16 +193,15 @@ import TabsSlider from "~components/TabsSlider.astro";
         </div>
     </section>
 
-    <section class="section section__white" style="background-image: url(img/backgrounds/5.jpg);">
-        <lottie-player class="section_noise" src="/img/json/noise/white.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-
+    <section class="section section__white section__no-bottom-indent" style="background-image: url(img/backgrounds/5.jpg);">
         <div class="section_content">
+            <span class="section_label">Biography</span>
             <div class="about">
-                <lottie-player class="about_image" src="/img/json/face-white/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay></lottie-player>
+                <lottie-player class="about_image" src="/img/json/face-white/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
                 <div class="about_content">
                     <h2 class="title">
-                        Kto ya?
+                        Kto<span class="title_small"> ya?</span>
                     </h2>
                     <h3 class="title">
                         WHO AM I?
@@ -226,7 +224,7 @@ import TabsSlider from "~components/TabsSlider.astro";
 
             <div class="poster">
                 <div class="poster_content">
-                    <span class="poster_suibtitle">
+                    <span class="poster_subtitle">
                         Look at me,bitch! 
                     </span>
                     <h3 class="poster_title">
@@ -237,12 +235,18 @@ import TabsSlider from "~components/TabsSlider.astro";
                 <div class="poster_image-wrapper">
                     <img src="/img/poster.png" alt="" class="poster_image">
                     <video class="poster_video" src="/img/poster.mp4" autoplay muted playsinline />
+                    <div class="poster_labels">
+                        <img src="/img/poster-label-1.svg" alt="" class="poster_label">
+                        <img src="/img/poster-label-2.svg" alt="" class="poster_label">
+                        <img src="/img/poster-label-3.svg" alt="" class="poster_label">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section section__blue" style="background-image: url(img/backgrounds/footer.jpg);">
+        <button class="section_top-button" onclick="window.scrollTo(0, 0)">Go back to top</button>
         <div class="section_content">
             <div class="contacts">
                 <h2 class="contacts_title">Contact</h2>
@@ -251,9 +255,9 @@ import TabsSlider from "~components/TabsSlider.astro";
                     <p>Hit me up!’ – Slide into my socials.</p>
                 </div>
                 <div class="contacts_links">
-                    <a href="mailto:timurlysenkotattoo@gmail.com" class="contacts_link" target="_blank">BOOKING tattoo</a>
-                    <a href="https://www.instagram.com/timur_lysenko/" class="contacts_link" target="_blank">Instagram</a>
-                    <a href="https://www.facebook.com/tattoo.timurlysenko/" class="contacts_link" target="_blank">Facebook</a>
+                    <a href="mailto:timurlysenkotattoo@gmail.com" class="contacts_link" target="_blank">BOOKING TATOO</a>
+                    <a href="https://www.instagram.com/timur_lysenko/" class="contacts_link" target="_blank">INSTAGRAM</a>
+                    <a href="https://www.facebook.com/tattoo.timurlysenko/" class="contacts_link" target="_blank">FACEBOOK</a>
                 </div>
                 <div class="contacts_text">
                     <p>Hit me up on email! Might take an age, but I'll get back to ya... eventually. No rush, right?</p>

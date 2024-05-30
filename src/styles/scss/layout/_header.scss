@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+    z-index: 3;
 
     &_holder {
         @include layout;
@@ -6,5 +8,19 @@
         justify-content: space-between;
         align-items: center;
         padding: 0;
+    }
+
+    &_bird {
+        position: absolute;
+        right: 7px;
+        top: 49px;
+        width: 122px;
+        height: 105px;
+        @include desktop {
+            width: 172px;
+            height: 148px;
+            left: 50%;
+            transform: translateX(600px);
+        }
     }
 }

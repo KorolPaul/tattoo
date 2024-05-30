@@ -1,5 +1,14 @@
 .contacts {
     &_text {
+        font-size: 30px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        margin: 0 0 45px;
+        @include desktop {
+            margin-bottom: 35px;
+            font-size: 64px;
+        }
+
         p {
             margin: 0;
         }
@@ -8,10 +17,44 @@
     &_links {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 20px;
+        margin: 0 0 60px;
         @include desktop {
+            justify-content: flex-start;
             flex-direction: row;
             gap: 110px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &_link {
+        color: $cLight;
+        font-size: 24px;
+        @include desktop {
+            font-size: 44px;
+        }
+
+        &:hover {
+            color: $cYellow;
+        }
+
+        &:nth-child(2):hover {
+            color: $cBright;
+        }
+
+        &:nth-child(3):hover {
+            color: $cBlue;
+        }
+    }
+
+    &_title {
+        color: $cLight;
+        margin: 0 0 26px;
+        font-size: 64px;
+        text-transform: uppercase;
+        @include desktop {
+            margin-bottom: 120px;
         }
     }
 }

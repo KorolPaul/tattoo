@@ -21,9 +21,14 @@ const { title, subtitle, tabsLabel, tabs } = Astro.props;
 <div class="tabs-slider">
     {title && <h2 class="tabs-slider_title">{title}</h2>}
     {subtitle && <p class="tabs-slider_subtitle">{subtitle}</p>}
+    {tabsLabel && <span class="tabs-slider_label">{tabsLabel}:</span>}
     <div class="tabs-slider_buttons">
-        {tabsLabel && <span class="tabs-slider_label">{tabsLabel}:</span>}
-        {tabs.map((tab) => (<button class="tabs-slider_button">{tab.name}</button>))}
+        {tabs.map((tab) => (
+            <button class="tabs-slider_button">
+                <div class="tabs-slider_button-bg"></div>
+                {tab.name}
+            </button>
+        ))}
     </div>
     
     <div class="tabs-slider_list">
@@ -69,5 +74,20 @@ const { title, subtitle, tabsLabel, tabs } = Astro.props;
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+
+    const tabsSliders = document.querySelectorAll('.tabs-slider');
+    tabsSliders.forEach((slider) => {
+        const buttons = slider.querySelectorAll('.tabs-slider_button');
+
+        console.log(buttons);
+        buttons.forEach(button => button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            buttons.forEach(button => button.classList.remove('active'));
+            e.target.classList.add('active');
+
+
+        }))
     });
 </script>
