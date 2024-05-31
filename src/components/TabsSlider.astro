@@ -93,10 +93,13 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
             const category = e.target.innerText.toLowerCase();
             slider.dataset.category = category;
 
-            slides.forEach(slide => slide.style.display = 'none');
-            slider.querySelectorAll(`.swiper-slide[data-category="${category}"]`).forEach(slide => slide.style.display = 'block');
+            slides.forEach(slide => {
+                const isSameCategory = slide.dataset.category.toLowerCase() === category;
+                console.log(slide.dataset.category.toLowerCase(), category,  slide.dataset.category.toLowerCase() === category);
+                slide.style.display = isSameCategory ? 'block' : 'none'
+            });
         }));
 
-        buttons[0].click();
+        // buttons[0].click();
     });
 </script>
