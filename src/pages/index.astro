@@ -2,18 +2,21 @@
 import Layout from "../layouts/Layout.astro";
 import TatoosSlider from "~components/TatoosSlider.astro";
 import TabsSlider from "~components/TabsSlider.astro";
+import Preloader from "~components/Preloader.astro";
 
 ---
 
 <Layout title="Timur Lysenko">
-    
+    <Preloader />
+
     <section class="section section__no-indent section__no-bottom-indent" style="background-image: url(img/backgrounds/1.png);">
+        <div class="glitch">
+            <lottie-player class="glitch_image" src="/img/json/glitches/intro.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+        </div>
+
         <div class="section_content">
             
             <div class="intro">
-                <div class="glitch">
-                    <lottie-player class="glitch_image" src="/img/json/glitches/intro.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-                </div>
 
                 <lottie-player class="intro_image" src="/img/json/timur/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
             </div>
@@ -68,13 +71,14 @@ import TabsSlider from "~components/TabsSlider.astro";
     </section>
 
     <section class="section" style="background-image: url(img/backgrounds/3.png);">
+        <div class="glitch glitch__top">
+            <lottie-player class="glitch_image" src="/img/json/glitches/tattoo.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+        </div>
+
         <div class="section_content">
             <span class="section_label">Artwork</span>
 
             <div class="about">
-                <div class="glitch">
-                    <lottie-player class="glitch_image" src="/img/json/glitches/tatoo.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-                </div>
 
                 <lottie-player class="about_image" src="/img/json/face-pink/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
@@ -105,6 +109,7 @@ import TabsSlider from "~components/TabsSlider.astro";
             </div>
 
             <TabsSlider
+                classModifier="tabs-slider__sketches"
                 title="Sketches"
                 tabsLabel="Series",
                 tabs={
@@ -145,7 +150,7 @@ import TabsSlider from "~components/TabsSlider.astro";
         </div>
     </section>
 
-    <section class="section section__blu section__no-bottom-indent" style="background-image: url(img/backgrounds/4.jpg);">
+    <section class="section section__blue section__no-bottom-indent" style="background-image: url(img/backgrounds/4.jpg);">
         <div class="section_content">
             <span class="section_label">Artwork</span>
 
@@ -177,23 +182,23 @@ import TabsSlider from "~components/TabsSlider.astro";
                         {
                             name: 'DRESOLOGIA',
                             slides: [
-                                {src: '/img/paintings/dresologia-1.jpg'},
-                                {src: '/img/paintings/dresologia-2.jpg'},
-                                {src: '/img/paintings/dresologia-3.jpg'},
-                                {src: '/img/paintings/dresologia-4.jpg'},
-                                {src: '/img/paintings/dresologia-5.jpg'},
-                                {src: '/img/paintings/dresologia-6.jpg'},
-                                {src: '/img/paintings/dresologia-7.jpg'},
+                                {src: '/img/paintings/dresologia-1.jpg', width: 462, color: '#0892F7'},
+                                {src: '/img/paintings/dresologia-2.jpg', width: 500, color: '#FF008C'},
+                                {src: '/img/paintings/dresologia-3.jpg', width: 1008, color: '#000'},
+                                {src: '/img/paintings/dresologia-4.jpg', width: 462, color: '#001BAC'},
+                                {src: '/img/paintings/dresologia-5.jpg', width: 1008, color: '#618201'},
+                                {src: '/img/paintings/dresologia-6.jpg', width: 462, color: '#00A0AF'},
+                                {src: '/img/paintings/dresologia-7.jpg', width: 929, color: '#E9E9E9'},
                             ]
                         },
                         {
                             name: 'Holy Adidas',
                             slides: [
-                                {src: '/img/paintings/adidas-1.jpg'},
-                                {src: '/img/paintings/adidas-2.jpg'},
-                                {src: '/img/paintings/adidas-3.jpg'},
-                                {src: '/img/paintings/adidas-4.jpg'},
-                                {src: '/img/paintings/adidas-5.jpg'},
+                                {src: '/img/paintings/adidas-1.jpg', width: 462, color: '#597C0C'},
+                                {src: '/img/paintings/adidas-2.jpg', width: 500, color: '#FBAB07'},
+                                {src: '/img/paintings/adidas-3.jpg', width: 1008, color: '#FF008C'},
+                                {src: '/img/paintings/adidas-4.jpg', width: 462, color: '#0892F7'},
+                                {src: '/img/paintings/adidas-5.jpg', width: 1008, color: '#618201'},
                             ]
                         },
                     ]
@@ -204,16 +209,16 @@ import TabsSlider from "~components/TabsSlider.astro";
                 <lottie-player class="artwork_image" src="/img/json/artwork/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
             </div>
         </div>
-
+        
+        <div class="glitch">
+            <lottie-player class="glitch_image" src="/img/json/glitches/biography.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+        </div>
     </section>
 
     <section class="section section__white section__no-bottom-indent" style="background-image: url(img/backgrounds/5.jpg);">
         <div class="section_content">
             <span class="section_label">Biography</span>
             <div class="about">
-                <div class="glitch">
-                    <lottie-player class="glitch_image" src="/img/json/glitches/biography.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
-                </div>
 
                 <lottie-player class="about_image" src="/img/json/face-white/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 
@@ -267,7 +272,7 @@ import TabsSlider from "~components/TabsSlider.astro";
         <button class="section_top-button" onclick="window.scrollTo(0, 0)">Go back to top</button>
         <div class="section_content">
             <div class="contacts">
-                <div class="glitch">
+                <div class="glitch glitch__top">
                     <lottie-player class="glitch_image" src="/img/json/glitches/footer.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
                 </div>
 

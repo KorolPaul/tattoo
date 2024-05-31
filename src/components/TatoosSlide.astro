@@ -9,8 +9,10 @@ const { src, color, title } = Astro.props;
 ---
 
 <a class="tatoo" href="/events/event" style={`background-color: ${color}`}>
-    <div class="tatoo_arrow" style={`background-color: ${color}`} />
-    <img class="tatoo_image" src={src} alt="" />
+    <div class="tatoo_image-wrapper">
+        <img class="tatoo_image" src={src} alt="" />
+        <div class="tatoo_arrow" style={`background-color: ${color}`} />
+    </div>
     {title && <span class="tatoo_title">{title}</span>}
 </a>
 

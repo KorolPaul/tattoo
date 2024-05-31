@@ -1,5 +1,5 @@
 .preloader {
-    display: none !important;
+    display: none !important; 
 
     position: fixed;
     top: 0;
@@ -8,24 +8,18 @@
     bottom: 0;
     z-index: 1111;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     pointer-events: none;
-    background-color: $cLight;
+    background-color: $cBright;
     transition: .5s $easing opacity;
+    animation: autohide 12.25s linear forwards;
     
-    .loaded & {
-        animation: autohide 7.25s linear forwards;
-        @include tablet {
-            animation-duration: 7.25s;
-        }
-    }
-
     &_image {
-        width: 100%;
+        width: 100vw;
         @include tablet {
-            max-width: 90%;
-            width: 1000px;
+            width: auto;
+            height: 100vh;
         }
 
         &__mobile {

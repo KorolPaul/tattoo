@@ -4,6 +4,14 @@
     position: relative;
     pointer-events: none;
 
+    &_image {
+        width: 100vw;
+        @include tablet {
+            width: auto;
+            height: 100vh;
+        }
+    }
+
     &_title {
         position: absolute;
         right: 0;

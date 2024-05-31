@@ -1,4 +1,15 @@
 .tabs-slider {
+    &__sketches {
+        .swiper-slide {
+            @include tablet {
+                width: 368px;
+            }
+            @include desktop {
+                width: 533px;
+            }
+        }
+    }
+
     &_label {
         font-size: 34px;
         line-height: 1.47;

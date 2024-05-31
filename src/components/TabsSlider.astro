@@ -5,20 +5,22 @@ export interface Props {
     title?: string;
     subtitle?: string;
     tabsLabel?: string;
+    classModifier?: string;
     tabs: Array<{
         name: string,
         slides: Array<{
             src: string,
             title?: string,
             color?: string,
+            width?: number,
         }>,
     }>;
 }
 
-const { title, subtitle, tabsLabel, tabs } = Astro.props;
+const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
 ---
 
-<div class="tabs-slider">
+<div class={`tabs-slider ${classModifier}`}>
     {title && <h2 class="tabs-slider_title">{title}</h2>}
     {subtitle && <p class="tabs-slider_subtitle">{subtitle}</p>}
     {tabsLabel && <span class="tabs-slider_label">{tabsLabel}:</span>}
@@ -37,7 +39,7 @@ const { title, subtitle, tabsLabel, tabs } = Astro.props;
                 <div class="swiper-wrapper">
                     {tabs.map((tab) => (
                         tab.slides.map((slide) => (
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-category={tab.name.toLowerCase()} style={{width: slide.width ? `${slide.width}px` : 'auto'}}>
                                 <div class="tabs-slider_slide">
                                         <TatoosSlide
                                             src={slide.src}
@@ -77,17 +79,24 @@ const { title, subtitle, tabsLabel, tabs } = Astro.props;
     });
 
     const tabsSliders = document.querySelectorAll('.tabs-slider');
+    const slides = document.querySelectorAll('.tabs-slider .swiper-slide');
+
     tabsSliders.forEach((slider) => {
         const buttons = slider.querySelectorAll('.tabs-slider_button');
 
-        console.log(buttons);
         buttons.forEach(button => button.addEventListener('click', (e) => {
             e.preventDefault();
 
             buttons.forEach(button => button.classList.remove('active'));
             e.target.classList.add('active');
 
+            const category = e.target.innerText.toLowerCase();
+            slider.dataset.category = category;
 
-        }))
+            slides.forEach(slide => slide.style.display = 'none');
+            slider.querySelectorAll(`.swiper-slide[data-category="${category}"]`).forEach(slide => slide.style.display = 'block');
+        }));
+
+        buttons[0].click();
     });
 </script>

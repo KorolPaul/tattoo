@@ -1,31 +1,101 @@
+.tatoos {
+    .swiper-slide {
+        width: 360px;
+        @include desktop {
+            width: 462px;
+        }
+    }
+}
+
 .tatoo {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     position: relative;
     padding: 20px 6px;
     border: 1px solid currentColor;
+    box-sizing: border-box;
+    transition: .2s $easingSmooth transform;
     @include desktop {
         padding: 26px 8px;
     }
 
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .tabs-slider__sketches & {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    &_image-wrapper {
+        border: 1px solid currentColor;
+        position: relative;
+
+        .tabs-slider__sketches & {
+            border: none;
+            padding: 11% 11%;
+            background: url(#{$img}/frames/frame-1.svg) no-repeat center / 100% 100%;
+            @include tablet {
+                padding: 43px 50px 40px 53px;
+            }
+        }
+
+        .tabs-slider__sketches .swiper-slide:nth-child(even) & {
+            background-image: url(#{$img}/frames/frame-2.svg);
+        }
+    }
+
     &_image {
         display: block;
-        max-width: 482px;
-        border: 1px solid currentColor;
+        @include desktop {
+            max-width: 446px;
+        }
+
+        
+        .swiper-slide[style] & {
+            @include desktop {
+                max-width: 100%;
+            }
+        }
+        .tabs-slider__sketches & {
+            @include desktop {
+                max-width: 430px !important;
+            }
+        }
     }
 
     &_arrow {
         position: absolute;
-        right: 7px;
-        bottom: 21px;
+        right: 0;
+        bottom: 0;
         width: 42px;
         height: 42px;  
         background: url(#{$img}/loop.svg) no-repeat center;
         @include desktop {
             width: 54px;
             height: 54px;
-            right: 9px;
-            bottom: 27px;
+        }
+
+        .tabs-slider__sketches & {
+            bottom: 14%;
+            right: 11%;
+            background: $color url(#{$img}/loop-light.svg) no-repeat center;
+            @include tablet { 
+                bottom: 40px;
+                right: 50px;
+            }
+        }
+    }
+
+    &_title {
+        display: block;
+        margin-top: 26px;
+        font-size: 24px;
+        text-transform: uppercase;
+        @include desktop {
+            margin-top: 40px;
         }
     }
 }
