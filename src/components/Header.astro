@@ -6,6 +6,9 @@
         -->
     </a>
     <div class="menu">
+        <lottie-player class="menu_logo" src="/img/json/menu/logo/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+        <lottie-player class="menu_close" src="/img/json/menu/close/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+
         <nav class="menu_links">
             <a href="/#tatoo" class="menu_link" style="color: #FF008C">Tattoo</a>
             <a href="/#artwork" class="menu_link" style="color: #618201">ARTWORK</a>
@@ -13,21 +16,26 @@
             <a href="/#store" class="menu_link" style="color: #FBAB07">STore</a>
         </nav>
 
+        <div class="menu_footer">
+            <a href="mailto:timurlysenkotattoo@gmail.com" class="menu_footer-link" target="_blank">BOOKING TATOO</a>
+            <a href="https://www.instagram.com/timur_lysenko/" class="menu_footer-link" target="_blank">INSTAGRAM</a>
+            <a href="https://www.facebook.com/tattoo.timurlysenko/" class="menu_footer-link" target="_blank">FACEBOOK</a>
+        </div>
+
         <script>
             document.querySelectorAll('.menu_link').forEach((link) => link.addEventListener('click', () => document.body.classList.remove('menu-opened')))
         </script>
     </div>
-    <button class="menu-toggle">
-        MENU
-    </button>
+    <div class="menu-toggle">
+        <lottie-player class="menu-toggle_image" src="/img/json/menu/open/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
+    </div>
+
     <lottie-player class="header_bird" src="/img/json/pigeon/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
 </header>
 
 <script>
-    const menuToggleElement = document.querySelector(".menu-toggle");
-    if (menuToggleElement) {
-        menuToggleElement.addEventListener("click", (e: Event) => {
-            document.body.classList.toggle("menu-opened");
-        });
-    }
+    const menuToggleElement = document.querySelectorAll(".menu-toggle, .menu_close");
+    menuToggleElement.forEach(el => el.addEventListener("click", (e: Event) => {
+        document.body.classList.toggle("menu-opened");
+    }));
 </script>

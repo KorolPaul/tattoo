@@ -5,6 +5,7 @@
     pointer-events: none;
     display: flex;
     flex-direction: column;
+    gap: 80px;
     align-items: center;
     position: fixed;
     opacity: 0;
@@ -13,6 +14,8 @@
     left: 0;
     height: 100vh;
     width: 100vw;
+    padding: 50px 0;
+    overflow: auto;
     padding: $indent;
     box-sizing: border-box;
     overflow: auto;
@@ -84,5 +87,38 @@
                 margin-left: 222px;
             }
         }
+    }
+
+    &_logo {
+        width: 166px;
+        height: auto;
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &_footer {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 22px;
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &_footer-link {
+        color: $cLight;
+        font-size: 24px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &_close {
+        position: absolute;
+        top: 26px;
+        right: 0;
+        width: 166px;
+        height: auto;
     }
 }
