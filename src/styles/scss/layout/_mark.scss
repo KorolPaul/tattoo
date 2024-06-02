@@ -1,0 +1,110 @@
+.mark {
+    position: relative;
+    white-space: nowrap;
+
+    &::before {
+        content: '';
+        background: no-repeat center / 100% 100%;
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        right: -3px;
+        left: -3px;
+        z-index: -1;
+        transform: translateY(80%);
+        opacity: 0;
+        transition: .8s $easeOutCirc opacity, .8s $easeOutCirc transform;
+        @include desktop {
+            top: -3px;
+            bottom: -3px;
+            right: -6px;
+            left: -6px;
+        }
+    }
+
+    &.animated::before {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    &.blue::before {
+        background-image: url(#{$img}/marks/blue.svg);
+    }
+    &.blue.big::before {
+        background-image: url(#{$img}/marks/blue-big.svg);
+    }
+    &.blue.small::before {
+        background-image: url(#{$img}/marks/blue-small.svg);
+    }
+
+    &.crimson::before {
+        background-image: url(#{$img}/marks/crimson.svg);
+    }
+    &.crimson.big::before {
+        background-image: url(#{$img}/marks/crimson-big.svg);
+    }
+    &.crimson.small::before {
+        background-image: url(#{$img}/marks/crimson-small.svg);
+    }
+
+    &.gray::before {
+        background-image: url(#{$img}/marks/gray.svg);
+    }
+    &.gray.big::before {
+        background-image: url(#{$img}/marks/gray-big.svg);
+    }
+    &.gray.small::before {
+        background-image: url(#{$img}/marks/gray-small.svg);
+    }
+
+    &.green::before {
+        background-image: url(#{$img}/marks/green.svg);
+    }
+    &.green.big::before {
+        background-image: url(#{$img}/marks/green-big.svg);
+    }
+    &.green.small::before {
+        background-image: url(#{$img}/marks/green-small.svg);
+    }
+
+    &.black::before {
+        background-image: url(#{$img}/marks/black.svg);
+    }
+    &.black.big::before {
+        background-image: url(#{$img}/marks/black-big.svg);
+    }
+    &.black.extra-big::before {
+        background-image: url(#{$img}/marks/black-extra-big.svg);
+    }
+    &.black.small::before {
+        background-image: url(#{$img}/marks/black-small.svg);
+    }
+
+    &.orange::before {
+        background-image: url(#{$img}/marks/orange.svg);
+    }
+    &.orange.big::before {
+        background-image: url(#{$img}/marks/orange-big.svg);
+    }
+    &.orange.extra-big::before {
+        background-image: url(#{$img}/marks/orange-extra-big.svg);
+    }
+    &.orange.small::before {
+        background-image: url(#{$img}/marks/orange-small.svg);
+    }
+
+    &.navy::before {
+        background-image: url(#{$img}/marks/navy.svg);
+    }
+    &.navy.big::before {
+        background-image: url(#{$img}/marks/navy-big.svg);
+    }
+    &.navy.small::before {
+        background-image: url(#{$img}/marks/navy-small.svg);
+    }
+
+    &.blue,
+    &.black {
+        color: $cBright;
+    }
+}
