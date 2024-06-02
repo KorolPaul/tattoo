@@ -4,4 +4,54 @@
             font-size: 144px;
         }
     }
+
+    span:not([class]) {
+        display: inline-block;
+        animation: char 6s steps(1, start) infinite;
+    }
+    span:not([class]):nth-child(odd) {
+        animation-name: char2;
+    }
+
+    @for $i from 1 through 20 {
+        span:not([class]):nth-child(#{$i}) {
+          animation-delay: .1s * $i;
+        }
+    }
+}
+
+@keyframes char {
+    0% {
+        translate: 0px 0px;
+    }
+
+    5% {
+        translate: -10px -12px;
+    }
+
+    10% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes char2 {
+    0% {
+        translate: 0px 0px;
+    }
+
+    5% {
+        translate: 12px 10px;
+    }
+
+    10% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
 }
