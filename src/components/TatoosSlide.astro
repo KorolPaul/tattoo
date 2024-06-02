@@ -3,12 +3,13 @@ export interface Props {
     color?: string;
     src: string;
     title?: string;
+    href: string;
 }
 
-const { src, color, title } = Astro.props;
+const { src, color, title, href } = Astro.props;
 ---
 
-<a class="tatoo" href="/events/event" style={`background-color: ${color}`}>
+<a data-fslightbox="gallery" class="tatoo" href={href || src} style={`background-color: ${color}`}>
     <div class="tatoo_image-wrapper">
         <img class="tatoo_image" src={src} alt="" />
         <div class="tatoo_arrow" style={`background-color: ${color}`} />
