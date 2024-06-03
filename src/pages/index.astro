@@ -29,7 +29,7 @@ import Preloader from "~components/Preloader.astro";
         <div class="section_content">
              <div class="showcase">
                 <div class="showcase_video-wrapper">
-                    <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop autoplay muted playsinline></video>
+                    <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop muted playsinline></video>
                     <div class="showcase_button">
                         <button class="button button__green">
                             Peek Into My World
@@ -61,6 +61,20 @@ import Preloader from "~components/Preloader.astro";
                                 video.setAttribute('src', video.dataset.src);
                             }
                         });
+
+                        const videoObserverCallback = function (e) {
+                            const { target, intersectionRatio } = e[0];
+                            if (intersectionRatio > 0.1) {
+                                target.querySelector('video').play();
+                            }
+                        };
+
+                        const observer = new IntersectionObserver(videoObserverCallback, {
+                            rootMargin: '0px 0px 0px 0px',
+                            threshold: thresholdSteps,
+                            //root: document.body
+                        });
+                        observer.observe(videoWrapper);
                     </script>
 
                 </div>
