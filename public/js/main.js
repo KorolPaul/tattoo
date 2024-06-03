@@ -20,4 +20,4 @@ if (animatedElements.length) {
         });
         observer.observe(el);
     })
-}
+};
