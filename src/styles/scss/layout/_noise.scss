@@ -6,8 +6,17 @@
     height: 100vw;
     z-index: 1;
     pointer-events: none;
-    display: none;
-    @include desktop {
-        display: block;
+
+    &__mobile {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        @include tablet {
+            display: block;
+        }
     }
 }

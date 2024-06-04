@@ -13,7 +13,7 @@
     pointer-events: none;
     background-color: $cBright;
     transition: .5s $easing opacity;
-    animation: autohide 13.25s linear forwards;
+    animation: autohide 4.75s linear forwards;
     
     &_image {
         width: auto;
@@ -41,7 +41,7 @@
         opacity: 1;
     }
 
-    86% {
+    88% {
         opacity: 1;
     }
 
