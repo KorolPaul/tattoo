@@ -32,7 +32,7 @@ const { title } = Astro.props;
             import "@lottiefiles/lottie-player";
             import { create } from "@lottiefiles/lottie-interactivity";
             
-            let lottiePlayers = document.querySelectorAll('lottie-player');
+            let lottiePlayers = document.querySelectorAll('lottie-player:not([autoplay])');
 
             lottiePlayers.forEach((item) => {
                 item.addEventListener("ready", () => {
@@ -41,7 +41,7 @@ const { title } = Astro.props;
                         mode:"scroll",
                         actions: [
                             {
-                                visibility: [0.50, 1.0],
+                                visibility: [0, 1.0],
                                 type: "play"
                             }
                         ]

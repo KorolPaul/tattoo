@@ -10,6 +10,13 @@
         }
     }
 
+    &_title {
+        font-size: 64px;
+        @include desktop {
+            font-size: 144px;
+        }
+    }
+
     &_label {
         font-size: 34px;
         line-height: 1.47;

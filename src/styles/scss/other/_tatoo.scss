@@ -1,4 +1,8 @@
 .tatoos {
+    &_list {
+        margin-bottom: 50px;
+    }
+
     .swiper-slide {
         width: 360px;
         @include desktop {
@@ -62,6 +66,7 @@
         .tabs-slider__sketches & {
             @include desktop {
                 max-width: 430px !important;
+                border: 1px solid #080808;
             }
         }
     }
@@ -86,6 +91,10 @@
                 bottom: 40px;
                 right: 50px;
             }
+        }
+
+        [style="background-color: #080808"] & {
+            background-image: url(#{$img}/loop-light.svg);
         }
     }
 

@@ -45,8 +45,22 @@ input[type="button"] {
 }
 
 .button {
+    width: 100%;
+    @include tablet {
+        width: auto;
+    }
+
     &__yellow {
         background-image: url(#{$img}/button-orange.png);
+    }
+
+    &_icon {
+        display: none;
+        @include tablet {
+            display: inline-block;
+            vertical-align: -4px;
+            margin: 0 10px 0 -6px;
+        }
     }
 }
 

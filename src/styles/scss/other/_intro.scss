@@ -5,10 +5,21 @@
     pointer-events: none;
 
     &_image {
-        width: 100vw;
-        @include tablet {
-            width: auto;
-            height: 100vh;
+        height: 100vh;
+        width: auto;
+
+        &__mobile {
+            margin-left: -20%;
+            margin-right: -20%;
+            @include tablet {
+                display: none;
+            }
+        }
+        &__desktop {
+            display: none;
+            @include tablet {
+                display: block;
+            }
         }
     }
 

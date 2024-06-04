@@ -52,8 +52,8 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
                     ))}
                 </div>
 
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
 
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -66,7 +66,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
     const swiper = new Swiper(".swiper", {
         loop: false,
         modules: [Navigation, Pagination],
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 20,
         pagination: {
             clickable: true,
@@ -76,13 +76,26 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+            }
+    }        
     });
 
     const tabsSliders = document.querySelectorAll('.tabs-slider');
-    const slides = document.querySelectorAll('.tabs-slider .swiper-slide');
-
+    
     tabsSliders.forEach((slider) => {
+        const slides = slider.querySelectorAll('.tabs-slider .swiper-slide');
         const buttons = slider.querySelectorAll('.tabs-slider_button');
+
+        function selectCategory(category) {
+            slides.forEach(slide => {
+                const isSameCategory = slide.dataset.category.toLowerCase() === category;
+                console.log(slide.dataset.category.toLowerCase(),  category, isSameCategory);
+                slide.style.display = isSameCategory ? 'block' : 'none'
+            });
+        }
 
         buttons.forEach(button => button.addEventListener('click', (e) => {
             e.preventDefault();
@@ -90,16 +103,10 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
             buttons.forEach(button => button.classList.remove('active'));
             e.target.classList.add('active');
 
-            const category = e.target.innerText.toLowerCase();
-            slider.dataset.category = category;
-
-            slides.forEach(slide => {
-                const isSameCategory = slide.dataset.category.toLowerCase() === category;
-                console.log(slide.dataset.category.toLowerCase(), category,  slide.dataset.category.toLowerCase() === category);
-                slide.style.display = isSameCategory ? 'block' : 'none'
-            });
+            selectCategory(e.target.innerText.toLowerCase());
         }));
 
-        // buttons[0].click();
+        buttons[0].classList.add('active');
+        selectCategory(buttons[0].innerText.toLowerCase());
     });
 </script>

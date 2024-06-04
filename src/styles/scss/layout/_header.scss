@@ -12,13 +12,15 @@
 
     &_bird {
         position: absolute;
-        right: 7px;
-        top: 49px;
-        width: 122px;
-        height: 105px;
+        display: none;
         @include desktop {
+            display: block;
             width: 172px;
             height: 148px;
+            right: 0;
+        }
+        @include media(1660px) {
+            right: auto;
             left: 50%;
             transform: translateX(600px);
         }

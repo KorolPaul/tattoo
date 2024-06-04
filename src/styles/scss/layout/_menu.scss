@@ -60,32 +60,60 @@
         font-size: 64px;
         font-style: normal;
         line-height: .94;
-        color: $cLight;
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
         white-space: nowrap;
-        filter: brightness(10);
-        transition: .2s $easing filter;
+        position: relative;
+        color: $cLight;
         @include desktop {
             color: $color;
             font-size: 30px;
-            filter: brightness(0);
         }
 
-        &:hover {
-            filter: brightness(1);
+        &:nth-child(1) {
+            @include desktop {
+                color: #FF008C;
+            }
         }
-
         &:nth-child(2) {
             @include desktop {
+                color: #618201;
                 margin-right: 222px;
             }
         }
         &:nth-child(3) {
             @include desktop {
+                color: #001BAC;
                 margin-left: 222px;
             }
+        }
+        &:nth-child(4) {
+            @include desktop {
+               color: #FBAB07;
+            }
+        }
+    }
+
+    &_link-text {
+        transition: .2s $easing filter;
+        @include desktop {
+            filter: brightness(0);
+        }
+
+        .menu_link:hover & {
+            filter: brightness(1);
+        }
+    }
+
+    &_link-soon {
+        position: absolute;
+        top: 76%;
+        left: 62%;
+        pointer-events: none;
+        @include desktop {
+            top: 70%;
+            left: 55%;
         }
     }
 
@@ -112,13 +140,14 @@
         font-size: 24px;
         line-height: 1;
         text-transform: uppercase;
+        text-decoration: none;
     }
 
     &_close {
         position: absolute;
         top: 26px;
         right: 0;
-        width: 166px;
+        width: 126px;
         height: auto;
         opacity: 0;
         pointer-events: none;

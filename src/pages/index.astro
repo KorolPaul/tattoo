@@ -11,18 +11,13 @@ import Preloader from "~components/Preloader.astro";
 
     <section class="section section__no-indent section__no-bottom-indent" style="background-image: url(img/backgrounds/1.png);">
         <div class="glitch">
-            <lottie-player class="glitch_image" src="/img/json/glitches/intro.json" background="transparent" speed="1" direction="1" mode="normal"   loop></lottie-player>
+            <lottie-player class="glitch_image" src="/img/json/glitches/intro.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>
         </div>
 
-        <div class="section_content">
-            
-            <div class="intro">
-
-                <lottie-player class="intro_image" src="/img/json/timur/data.json" background="transparent" speed="1" direction="1" mode="normal"   loop></lottie-player>
-            </div>
-
+        <div class="intro">
+            <lottie-player class="intro_image intro_image__mobile" src="/img/json/timur/mobile/data.json" background="transparent" speed="1" direction="1" mode="normal" loop autoplay preserveAspectRatio="xMidYMax meet"></lottie-player>
+            <lottie-player class="intro_image intro_image__desktop" src="/img/json/timur/data.json" background="transparent" speed="1" direction="1" mode="normal" loop autoplay preserveAspectRatio="xMidYMax meet"></lottie-player>
         </div>
-
     </section>
 
     <section class="section" style="background-image: url(img/backgrounds/2.jpg);">
@@ -32,8 +27,8 @@ import Preloader from "~components/Preloader.astro";
                     <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop muted playsinline></video>
                     <div class="showcase_button">
                         <button class="button button__green">
-                            Peek Into My World
-                            <img src="/img/play.svg" alt="">
+                            PEEK INTO MY WORLD
+                            <img class="button_icon" src="/img/play.svg" alt="">
                         </button>
                     </div>
                     <script>
@@ -120,13 +115,13 @@ import Preloader from "~components/Preloader.astro";
             <TatoosSlider />
 
             <div class="book">
-                <button class="button">Book Your Ink Session</button>
+                <button class="button">BOOK YOUR INK SESSION</button>
                 <lottie-player class="book_animation" src="/img/json/booking/data.json" background="transparent" speed="1" direction="1" mode="normal"   loop></lottie-player>
             </div>
 
             <TabsSlider
                 classModifier="tabs-slider__sketches"
-                title="Sketches"
+                title="SKETCHES"
                 tabsLabel="Series",
                 tabs={
                     [
@@ -190,7 +185,7 @@ import Preloader from "~components/Preloader.astro";
             </div>
 
             <TabsSlider
-                title="Oil Whispers"
+                title="OIL WHISPERS"
                 subtitle="This series, which you can feast your eyes on at the convention, is a collection of my latest oil paintings. "
                 tabsLabel="Series",
                 tabs={
@@ -270,7 +265,7 @@ import Preloader from "~components/Preloader.astro";
                     <h3 class="poster_title">
                         Grab exclusive gear from my store. Get your rebel on!
                     </h3>
-                    <button class="button button__yellow">Storm the STORE</button>
+                    <button class="button button__yellow">STORM STORE</button>
                 </div>
                 <div class="poster_image-wrapper">
                     <img src="/img/poster.png" alt="" class="poster_image">

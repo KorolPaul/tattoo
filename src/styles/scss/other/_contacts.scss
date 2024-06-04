@@ -53,6 +53,7 @@
         margin: 0 0 26px;
         font-size: 64px;
         text-transform: uppercase;
+        position: relative;
         @include desktop {
             margin-bottom: 120px;
         }

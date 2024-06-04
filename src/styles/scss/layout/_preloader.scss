@@ -1,5 +1,5 @@
 .preloader {
-    display: none !important; 
+    // display: none !important; 
 
     position: fixed;
     top: 0;
@@ -13,16 +13,15 @@
     pointer-events: none;
     background-color: $cBright;
     transition: .5s $easing opacity;
-    animation: autohide 12.25s linear forwards;
+    animation: autohide 13.25s linear forwards;
     
     &_image {
-        width: 100vw;
-        @include tablet {
-            width: auto;
-            height: 100vh;
-        }
+        width: auto;
+        height: 100vh;
 
         &__mobile {
+            margin-left: -20%;
+            margin-right: -20%;
             @include tablet {
                 display: none;
             }
