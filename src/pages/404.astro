@@ -1,0 +1,23 @@
+---
+import LayoutEmpty from "../layouts/LayoutEmpty.astro";
+import TatoosSlider from "~components/TatoosSlider.astro";
+import TabsSlider from "~components/TabsSlider.astro";
+import Preloader from "~components/Preloader.astro";
+
+---
+
+<LayoutEmpty title="Not found">
+    <section class="page-404">
+        <div class="page-404_content">
+             <h1 class="page-404_title">404</h1>
+             <h2 class="page-404_subtitle">Whoa! You've crashed into a brawl. 
+                Looks like you're off the map</h2>
+
+            <lottie-player class="page-404_image" src="/img/json/404/fight/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop preserveAspectRatio="none"></lottie-player>
+
+            <button class="button button__pink">Escape the Fight!</button>
+        </div>
+
+    </section>
+
+</LayoutEmpty>

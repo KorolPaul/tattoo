@@ -54,6 +54,10 @@ input[type="button"] {
         background-image: url(#{$img}/button-orange.png);
     }
 
+    &__pink {
+        background-image: url(#{$img}/button-pink.png);
+    }
+
     &_icon {
         display: none;
         @include tablet {

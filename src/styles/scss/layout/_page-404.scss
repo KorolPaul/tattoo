@@ -1,0 +1,39 @@
+.page-404 {
+    background-color: $cBlue;
+    padding: 100px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &_content {
+        max-width: 764px;
+        text-align: center;
+    }
+
+    &_title {
+        font-size: 114px;
+        line-height: 60px;
+        text-transform: uppercase;
+        margin: 0 0 33px;
+    }
+
+    &_subtitle {
+        font-size: 22px;
+        line-height: 33px; /* 150% */
+        text-transform: uppercase;
+        margin: 0;
+        color: $cLight;
+        @include desktop {
+            font-weight: 400;
+            line-height: 45px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &_image {
+        max-width: 522px;
+        height: auto;
+        margin: 0 auto 44px;
+    }
+}

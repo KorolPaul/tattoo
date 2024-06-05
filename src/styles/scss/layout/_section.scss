@@ -2,10 +2,49 @@
     overflow: hidden;
     padding: 136px 0 170px;
     background:  no-repeat center / cover;
+    background-attachment: fixed;
     position: relative;
     @include desktop {
+        background-attachment: initial;
         padding-top: 275px;
         padding-bottom: 205px;
+    }
+
+    &__bg1 {
+        background-image: url(img/backgrounds/1-mobile.jpg);
+        @include tablet {
+            background-image: url(img/backgrounds/1.png);
+        }
+    }
+    &__bg2 {
+        background-image: url(img/backgrounds/2-mobile.jpg);
+        @include tablet {
+            background-image: url(img/backgrounds/2.png);
+        }
+    }
+    &__bg3 {
+        background-image: url(img/backgrounds/3-mobile.jpg);
+        @include tablet {
+            background-image: url(img/backgrounds/3.png);
+        }
+    }
+    &__bg4 {
+        background-image: url(img/backgrounds/4-mobile.jpg);
+        @include tablet {
+            background-image: url(img/backgrounds/4.jpg);
+        }
+    }
+    &__bg5 {
+        background-image: url(img/backgrounds/5-mobile.jpg);
+        @include tablet {
+            background-image: url(img/backgrounds/5.jpg);
+        }
+    }
+    &__bg-footer {
+        background-image: url(img/backgrounds/footer-mobile.png);
+        @include tablet {
+            background-image: url(img/backgrounds/footer.png);
+        }
     }
 
     &__blue {
