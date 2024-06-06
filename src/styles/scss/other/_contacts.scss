@@ -26,6 +26,10 @@
             gap: 110px;
             margin-bottom: 60px;
         }
+
+        &:last-child {
+            margin: 0;
+        }
     }
 
     &_link {

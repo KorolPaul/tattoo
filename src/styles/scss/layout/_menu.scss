@@ -120,6 +120,7 @@
     &_logo {
         width: 166px;
         height: auto;
+        margin-top: 16px;
         @include desktop {
             display: none;
         }

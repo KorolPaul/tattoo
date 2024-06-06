@@ -42,7 +42,9 @@
     }
     &__bg-footer {
         background-image: url(img/backgrounds/footer-mobile.jpg);
+        padding-bottom: 150px;
         @include tablet {
+            padding-bottom: 200px;
             background-image: url(img/backgrounds/footer.jpg);
         }
     }

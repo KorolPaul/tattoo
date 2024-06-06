@@ -35,12 +35,7 @@
     @include tablet {
         padding-bottom: 132px;
     }
-    @include media(1704px) {
-        margin-left: calc(-50vw + $max-width / 2);
-        margin-right: calc(-50vw + $max-width / 2);
-        padding-left: calc(50vw - $max-width / 2);
-        padding-right: calc(50vw - $max-width / 2);
-    }
+
 }
 
 .swiper {
@@ -298,7 +293,7 @@
     height: 38px;
     bottom: 10px;
     right: 20px;
-    border-radius: 4px;
+    border-radius: 0;
     transition: .2s $easingSmooth transform;
     @include desktop {
         width: 80px;
@@ -444,10 +439,6 @@
     transition: .2s $easingSmooth background,
                 .2s $easingSmooth transform;
 
-    &:nth-child(even) {
-        border-radius: 4px;
-    }
-
     &:first-child {
         transform-origin: left center;
     }
@@ -475,6 +466,10 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet-active {
     background: $cBright;
     transform: scale(1, 1.6) rotate(20deg);
+
+    .section__blue & {
+        background-color: #0892F7;
+    }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,

@@ -1,9 +1,12 @@
 .page-404 {
-    background-color: $cBlue;
+    background: $cBlue url(#{$img}/404-mobile.jpg) no-repeat center / cover;
     padding: 100px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tablet {
+        background-image: url(#{$img}/404.jpg);
+    }
     
 
     &_content {
@@ -20,13 +23,12 @@
 
     &_subtitle {
         font-size: 22px;
-        line-height: 33px; /* 150% */
+        line-height: 1.5; /* 150% */
         text-transform: uppercase;
         margin: 0;
         color: $cLight;
         @include desktop {
             font-weight: 400;
-            line-height: 45px;
             margin-bottom: 40px;
         }
     }

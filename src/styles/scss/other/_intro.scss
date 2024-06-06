@@ -1,16 +1,21 @@
 .intro {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     pointer-events: none;
+    height: 100vh;
 
     &_image {
-        height: 100vh;
         width: auto;
 
         &__mobile {
-            margin-left: -20%;
-            margin-right: -20%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 150vh;
+            width: 100vh;
+            transform: translateX(-50%);
             @include tablet {
                 display: none;
             }

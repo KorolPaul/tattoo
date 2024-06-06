@@ -64,9 +64,9 @@
             }
         }
         .tabs-slider__sketches & {
+            border: 1px solid #080808;
             @include desktop {
                 max-width: 430px !important;
-                border: 1px solid #080808;
             }
         }
     }

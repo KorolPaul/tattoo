@@ -2,8 +2,12 @@
     position: absolute;
     pointer-events: none;
     right: 0;
-    bottom: 0;
+    top: 20%;
     max-width: 100%;
+    @include desktop {
+        top: auto;
+        bottom: 0;
+    }
 
     &__top {
         top: 0;
