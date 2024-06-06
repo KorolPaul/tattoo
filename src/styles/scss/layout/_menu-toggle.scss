@@ -23,4 +23,26 @@
         height: auto;
         pointer-events: none;
     }
+
+    .menu-toggled & {
+        animation: button-movement .5s steps(2, start);
+    }
+
+}
+@keyframes button-movement {
+    0% {
+        transform: translateX(6%);
+    }
+
+    33% {
+        transform: translateX(-8%);
+    }
+
+    66% {
+        transform: translateX(4%);
+    }
+
+    100% {
+        transform: translateX(-5%);
+    }
 }

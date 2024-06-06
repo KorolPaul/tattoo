@@ -13,4 +13,20 @@
         top: 0;
         bottom: auto;
     }
+
+    .glitch-wrapper & {
+        top: -50px;
+        @include desktop {
+            top: 0;
+        }
+    }
+}
+
+.glitch-wrapper {
+    position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
+    @include desktop {
+        position: static;
+    }
 }

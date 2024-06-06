@@ -47,5 +47,11 @@
     const menuToggleElement = document.querySelectorAll(".menu-toggle, .menu_close");
     menuToggleElement.forEach(el => el.addEventListener("click", (e: Event) => {
         document.body.classList.toggle("menu-opened");
+
+        document.body.classList.add("menu-toggled");
+        setTimeout(() => {
+            document.body.classList.remove("menu-toggled");
+        }, 500);
+
     }));
 </script>

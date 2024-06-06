@@ -160,5 +160,9 @@
             opacity: 1;
             pointer-events: all;
         }
+
+        .menu-toggled & {
+            animation: button-movement .5s steps(2, start);
+        }
     }
 }

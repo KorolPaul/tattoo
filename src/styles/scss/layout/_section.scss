@@ -117,6 +117,7 @@
         font-size: 54px;
         line-height: 1.1;
         text-transform: uppercase;
+        position: relative;
         @include desktop {
             margin-bottom: 112px;
         }
