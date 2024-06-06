@@ -41,7 +41,7 @@
             border: none;
             padding: 11% 11%;
             background: url(#{$img}/frames/frame-1.svg) no-repeat center / 100% 100%;
-            @include tablet {
+            @include desktop {
                 padding: 43px 50px 40px 53px;
             }
         }

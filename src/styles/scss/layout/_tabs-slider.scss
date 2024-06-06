@@ -1,4 +1,10 @@
 .tabs-slider {
+    .swiper-slide {
+        @include mobile {
+            width: calc(100vw - 40px) !important;
+        }
+    }
+
     &__sketches {
         .swiper-slide {
             @include tablet {
