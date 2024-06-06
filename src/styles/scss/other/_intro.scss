@@ -8,6 +8,7 @@
 
     &_image {
         width: auto;
+        animation: autoshow 6s linear forwards;
 
         &__mobile {
             position: absolute;
@@ -39,5 +40,19 @@
             left: 65%;
             transform: translateX(-50%);
         }
+    }
+}
+
+@keyframes autoshow {
+    0% {
+        opacity: 0;
+    }
+
+    99.9% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

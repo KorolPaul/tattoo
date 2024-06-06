@@ -11,28 +11,55 @@
     align-items: flex-end;
     justify-content: center;
     pointer-events: none;
-    background-color: $cBright;
     transition: .5s $easing opacity;
-    animation: autohide 4.75s linear forwards;
+    animation: autohide 1s linear 6s forwards;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $cBright;
+        animation: autohide-bg 6s linear forwards;
+    }
     
     &_image {
         width: auto;
-        height: 100vh;
 
         &__mobile {
-            margin-left: -20%;
-            margin-right: -20%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 150vh;
+            width: 100vh;
+            transform: translateX(-50%);
             @include tablet {
                 display: none;
             }
         }
-
         &__desktop {
             display: none;
             @include tablet {
                 display: block;
+                height: calc(100% - 100px);
             }
         }
+    }
+}
+
+@keyframes autohide-bg {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -41,7 +68,7 @@
         opacity: 1;
     }
 
-    88% {
+    99.9% {
         opacity: 1;
     }
 
