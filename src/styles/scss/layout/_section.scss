@@ -13,19 +13,19 @@
     &__bg1 {
         background-image: url(img/backgrounds/1-mobile.jpg);
         @include tablet {
-            background-image: url(img/backgrounds/1.png);
+            background-image: url(img/backgrounds/1.jpg);
         }
     }
     &__bg2 {
         background-image: url(img/backgrounds/2-mobile.jpg);
         @include tablet {
-            background-image: url(img/backgrounds/2.png);
+            background-image: url(img/backgrounds/2.jpg);
         }
     }
     &__bg3 {
         background-image: url(img/backgrounds/3-mobile.jpg);
         @include tablet {
-            background-image: url(img/backgrounds/3.png);
+            background-image: url(img/backgrounds/3.jpg);
         }
     }
     &__bg4 {
@@ -41,9 +41,9 @@
         }
     }
     &__bg-footer {
-        background-image: url(img/backgrounds/footer-mobile.png);
+        background-image: url(img/backgrounds/footer-mobile.jpg);
         @include tablet {
-            background-image: url(img/backgrounds/footer.png);
+            background-image: url(img/backgrounds/footer.jpg);
         }
     }
 

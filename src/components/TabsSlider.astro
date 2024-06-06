@@ -10,6 +10,7 @@ export interface Props {
         name: string,
         slides: Array<{
             src: string,
+            srcBig?: string,
             title?: string,
             color?: string,
             width?: number,
@@ -43,6 +44,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
                                 <div class="tabs-slider_slide">
                                         <TatoosSlide
                                             src={slide.src}
+                                            href={slide.srcBig || slide.src}
                                             color={slide.color}
                                             title={slide.title}
                                         />
