@@ -24,6 +24,7 @@
             display: none;
             @include tablet {
                 display: block;
+                height: calc(100% - 100px);
             }
         }
     }

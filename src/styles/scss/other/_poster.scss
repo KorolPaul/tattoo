@@ -62,6 +62,7 @@
     &_content {
         @include desktop {
             padding-top: 150px;
+            max-width: 616px;
         }
     }
 
@@ -81,5 +82,13 @@
 
     &_label {
         max-width: none;
+    }
+
+    &_button-wrapper {
+        position: relative;
+
+        .button {
+            width: 100%;
+        }
     }
 }

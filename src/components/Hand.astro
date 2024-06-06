@@ -1,0 +1,9 @@
+---
+export interface Props {
+    modifier?: string;
+}
+
+const {modifier = ''} = Astro.props;
+---
+
+<lottie-player class={`hand ${modifier}`} src="/img/json/hand/data.json" background="transparent" speed="1" direction="1" mode="normal" autoplay loop></lottie-player>

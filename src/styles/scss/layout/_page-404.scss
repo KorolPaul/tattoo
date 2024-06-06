@@ -12,6 +12,8 @@
     &_content {
         max-width: 764px;
         text-align: center;
+        position: relative;
+        z-index: 1;
     }
 
     &_title {
@@ -27,6 +29,7 @@
         text-transform: uppercase;
         margin: 0;
         color: $cLight;
+        max-width: 765px;
         @include desktop {
             font-weight: 400;
             margin-bottom: 40px;

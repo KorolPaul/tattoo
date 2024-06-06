@@ -1,0 +1,42 @@
+.hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    height: 637px;
+    width: 170px;
+    @include desktop {
+        width: auto;
+        height: auto;
+    }
+
+    &__video {
+        rotate: -45deg;
+        transform-origin: left top;
+        translate: -22% 7%;
+        @include desktop {
+            rotate: -135deg;
+            translate: 60% 2%;
+        }
+    }
+
+    &__tabs {
+        left: 0;
+        top: 0;
+        transform-origin: left top;
+        rotate: 45deg;
+        translate: 4% -5%;
+        @include desktop {
+            translate: 20% 0%;
+        }
+    }
+
+    &__poster {
+        transform-origin: left top;
+        rotate: 45deg;
+        translate: -23% -8%;
+        @include desktop {
+            translate: -23% -3%;
+        }
+    }
+}

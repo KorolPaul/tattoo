@@ -1,5 +1,6 @@
 ---
 import TatoosSlide from "~components/TatoosSlide.astro";
+import Hand from "~components/Hand.astro";
 
 export interface Props {
     title?: string;
@@ -26,6 +27,8 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
     {subtitle && <p class="tabs-slider_subtitle">{subtitle}</p>}
     {tabsLabel && <span class="tabs-slider_label">{tabsLabel}:</span>}
     <div class="tabs-slider_buttons">
+        <Hand modifier="hand__tabs" />
+
         {tabs.map((tab) => (
             <button class="tabs-slider_button">
                 <div class="tabs-slider_button-bg"></div>

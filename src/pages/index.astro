@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TatoosSlider from "~components/TatoosSlider.astro";
 import TabsSlider from "~components/TabsSlider.astro";
 import Preloader from "~components/Preloader.astro";
+import Hand from "~components/Hand.astro";
 
 ---
 
@@ -22,10 +23,12 @@ import Preloader from "~components/Preloader.astro";
 
     <section class="section section__bg2">
         <div class="section_content">
-             <div class="showcase">
+            <div class="showcase">
                 <div class="showcase_video-wrapper">
+                    
                     <video src="/img/main-video-mobile.mp4" data-src="/img/main-video.mp4" class="showcase_video" loop muted playsinline></video>
                     <div class="showcase_button">
+                        <Hand modifier="hand__video" />
                         <button class="button button__green">
                             PEEK INTO MY WORLD
                             <img class="button_icon" src="/img/play.svg" alt="">
@@ -270,7 +273,10 @@ import Preloader from "~components/Preloader.astro";
                     <h3 class="poster_title">
                         Grab exclusive gear from my store. Get your rebel on!
                     </h3>
-                    <button class="button button__yellow">STORM STORE</button>
+                    <div class="poster_button-wrapper">
+                        <Hand modifier="hand__poster" />
+                        <button class="button button__yellow">STORM STORE</button>
+                    </div>
                 </div>
                 <div class="poster_image-wrapper">
                     <img src="/img/poster.png" alt="" class="poster_image">

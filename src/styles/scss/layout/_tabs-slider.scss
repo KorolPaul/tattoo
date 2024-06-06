@@ -33,6 +33,7 @@
         flex-wrap: wrap;
         gap: 14px 22px;
         margin: 0 0 26px;
+        position: relative;
         @include desktop {
             display: inline-flex;
             gap: 26px;
