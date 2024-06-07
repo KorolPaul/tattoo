@@ -1,5 +1,6 @@
 .mark {
     position: relative;
+    display: inline-block;
     @include tablet {
         white-space: nowrap;
     }
@@ -96,10 +97,14 @@
     }
 
     &.navy::before {
-        background-image: url(#{$img}/marks/navy.svg);
+        @include desktop {
+            background-image: url(#{$img}/marks/navy.svg);
+        }
     }
     &.navy.big::before {
-        background-image: url(#{$img}/marks/navy-big.svg);
+        @include desktop {
+            background-image: url(#{$img}/marks/navy-big.svg);
+        }
     }
     &.navy.small::before {
         background-image: url(#{$img}/marks/navy-small.svg);
