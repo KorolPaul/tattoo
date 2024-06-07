@@ -66,6 +66,12 @@ input[type="button"] {
             margin: 0 10px 0 -6px;
         }
     }
+
+    &_soon {
+
+        margin: -4px -87px 0 0;
+        vertical-align: middle;
+    }
 }
 
 @keyframes button-rotate {

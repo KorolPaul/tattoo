@@ -65,4 +65,4 @@ function enableScroll() {
 disableScroll();
 setTimeout(() => {
     enableScroll()
-}, 4200);
+}, 6000);
