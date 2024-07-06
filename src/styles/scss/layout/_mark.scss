@@ -1,9 +1,6 @@
 .mark {
     position: relative;
     display: inline-block;
-    @include tablet {
-        white-space: nowrap;
-    }
 
     &::before {
         content: '';

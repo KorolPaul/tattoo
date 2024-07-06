@@ -2,10 +2,8 @@
     overflow: hidden;
     padding: 136px 0 170px;
     background:  no-repeat center / cover;
-    background-attachment: fixed;
     position: relative;
     @include desktop {
-        background-attachment: initial;
         padding-top: 275px;
         padding-bottom: 205px;
     }

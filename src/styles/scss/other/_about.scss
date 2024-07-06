@@ -12,6 +12,10 @@
         max-width: 464px;
     }
 
+    &_content {
+        flex-shrink: 1;
+    }
+
     h3 {
         margin-bottom: 64px;
         @include desktop {

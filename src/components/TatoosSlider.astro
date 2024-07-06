@@ -12,7 +12,7 @@ const { title } = Astro.props;
     <h2>{title}</h2>
     <div class="tatoos_list">
         <div class="swiper-holder">
-            <div class="swiper">
+            <div class="swiper swiper-tatoos">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <TatoosSlide
@@ -65,7 +65,7 @@ const { title } = Astro.props;
                     </div>
                 </div>
 
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination swiper-pagination-tatoos"></div>
             </div>
 
             <div class="swiper-button-prev"></div>
@@ -76,18 +76,18 @@ const { title } = Astro.props;
 <script>
     import Swiper from "swiper";
     import { Navigation, Pagination } from "swiper/modules";
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".swiper-tatoos", {
         loop: false,
         modules: [Navigation, Pagination],
         slidesPerView: 'auto',
         spaceBetween: 20,
         pagination: {
             clickable: true,
-            el: ".swiper-pagination",
+            el: ".swiper-pagination-tatoos",
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".tatoos .swiper-button-next",
+            prevEl: ".tatoos .swiper-button-prev",
         },
     });
 </script>

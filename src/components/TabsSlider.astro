@@ -7,6 +7,7 @@ export interface Props {
     subtitle?: string;
     tabsLabel?: string;
     classModifier?: string;
+    swiperClassName: string;
     tabs: Array<{
         name: string,
         slides: Array<{
@@ -19,7 +20,7 @@ export interface Props {
     }>;
 }
 
-const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
+const { title, subtitle, tabsLabel, tabs, classModifier = '', swiperClassName } = Astro.props;
 ---
 
 <div class={`tabs-slider ${classModifier}`}>
@@ -39,7 +40,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
     
     <div class="tabs-slider_list">
         <div class="swiper-holder">
-            <div class="swiper">
+            <div class={`swiper ${swiperClassName}`}>
                 <div class="swiper-wrapper">
                     {tabs.map((tab) => (
                         tab.slides.map((slide) => (
@@ -49,7 +50,6 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
                                             src={slide.src}
                                             href={slide.srcBig || slide.src}
                                             color={slide.color}
-                                            title={slide.title}
                                         />
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
                     ))}
                 </div>
 
-                <div class="swiper-pagination"></div>
+                <div  class={`swiper-pagination swiper-pagination-${swiperClassName}`}></div>
             </div>
 
             <div class="swiper-button-prev"></div>
@@ -68,7 +68,11 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
 <script>
     import Swiper from "swiper";
     import { Navigation, Pagination } from "swiper/modules";
-    const swiper = new Swiper(".swiper", {
+
+    const swiperClassName = 'tabs-slider_list'
+
+
+    const swiper = new Swiper(`.${swiperClassName} .swiper`, {
         loop: false,
         modules: [Navigation, Pagination],
         slidesPerView: 'auto',
@@ -76,11 +80,11 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '' } = Astro.props;
         spaceBetween: 20,
         pagination: {
             clickable: true,
-            el: ".swiper-pagination",
+            el: `.tabs-slider .swiper-pagination`,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".tabs-slider .swiper-button-next",
+            prevEl: ".tabs-slider .swiper-button-prev",
         },
     });
 
