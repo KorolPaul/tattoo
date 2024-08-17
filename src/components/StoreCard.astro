@@ -1,0 +1,32 @@
+---
+export interface Props {
+    src: string;
+    title: string;
+    width: string;
+    height: string;
+    price: string;
+    href: string;
+}
+
+const { src, title, width, height, href, price } = Astro.props;
+---
+
+<div class="store-card">
+    <div class="store-card_image-wrapper">
+        <img src={src} alt="" class="store-card_image">
+    </div>
+    <div class="store-card_content">
+        <div>
+            <span class="store-card_title">{title}</span>
+            <span class="store-card_params">
+                <strong>width:</strong> {width}
+                <strong>height:</strong> {height}
+            </span>
+            <span class="store-card_price">PLN {price}</span>
+        </div>
+
+        <a class="store-card_button button button__small" href={href} target="_blank" rel="noopener noreferrer">
+            Buy
+        </a>
+    </div>
+</div>

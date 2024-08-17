@@ -14,6 +14,11 @@
         bottom: auto;
     }
 
+    &__middle {
+        top: 90px;
+        bottom: auto;
+    }
+
     .glitch-wrapper & {
         top: -50px;
         @include desktop {

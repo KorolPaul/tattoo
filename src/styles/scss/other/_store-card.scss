@@ -1,0 +1,51 @@
+.store-card {
+    border: 1px solid #080808;
+    background: #D9D9D9;
+    padding: 20px 6px 42px;
+    text-transform: uppercase;
+    @include tablet {
+        padding: 30px 10px 72px;
+    }
+
+    &_image-wrapper {
+        border: 1px solid #080808;
+        margin: 0 0 18px;
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_image {
+        width: 100%;
+    }
+
+    &_content {
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+    &_title {
+        font-size: 18px;
+        display: block;
+        margin: 0 0 8px;
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+
+    &_params {
+        display: block;
+        font-size: 14px;
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+
+    &_price {
+        font-size: 30px;
+        @include tablet {
+            font-size: 34px;
+        }
+    }
+}

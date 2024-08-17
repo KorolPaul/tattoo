@@ -31,7 +31,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '', swiperClassName } 
         <Hand modifier="hand__tabs" />
 
         {tabs.map((tab) => (
-            <button class="tabs-slider_button">
+            <button class="tabs-slider_button" data-category={tab.name.toLowerCase()}>
                 <div class="tabs-slider_button-bg"></div>
                 {tab.name}
             </button>
@@ -97,6 +97,7 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '', swiperClassName } 
         function selectCategory(category) {
             slides.forEach(slide => {
                 const isSameCategory = slide.dataset.category.toLowerCase() === category;
+                
                 console.log(slide.dataset.category.toLowerCase(),  category, isSameCategory);
                 slide.style.display = isSameCategory ? 'block' : 'none'
             });
@@ -108,10 +109,10 @@ const { title, subtitle, tabsLabel, tabs, classModifier = '', swiperClassName } 
             buttons.forEach(button => button.classList.remove('active'));
             e.target.classList.add('active');
 
-            selectCategory(e.target.innerText.toLowerCase());
+            selectCategory(e.target.dataset.category.toLowerCase());
         }));
 
         buttons[0].classList.add('active');
-        selectCategory(buttons[0].innerText.toLowerCase());
+        selectCategory(buttons[0].dataset.category.toLowerCase());
     });
 </script>

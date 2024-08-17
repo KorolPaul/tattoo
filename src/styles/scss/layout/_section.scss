@@ -3,6 +3,7 @@
     padding: 136px 0 170px;
     background:  no-repeat center / cover;
     position: relative;
+    content-visibility: auto;
     @include desktop {
         padding-top: 275px;
         padding-bottom: 205px;
