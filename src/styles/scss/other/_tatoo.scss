@@ -18,7 +18,11 @@
     padding: 20px 6px;
     border: 1px solid currentColor;
     box-sizing: border-box;
+    width: 100%;
     transition: .2s $easingSmooth transform;
+    @include tablet {
+        width: auto;
+    }
     @include desktop {
         padding: 26px 8px;
     }
@@ -53,10 +57,16 @@
 
     &_image {
         display: block;
+        max-height: 230px;
+        width: 100%;
+        object-fit: cover;
+        @include tablet {
+            max-height: none;
+            width: auto;
+        }
         @include desktop {
             max-width: 446px;
         }
-
         
         .swiper-slide[style] & {
             @include desktop {
