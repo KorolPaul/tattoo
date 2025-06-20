@@ -96,6 +96,7 @@
     }
 
     &_link-text {
+        color: $cLight;
         transition: .2s $easing filter;
         @include desktop {
             filter: brightness(0);
